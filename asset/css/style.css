@@ -1,0 +1,746 @@
+/* Font Poppins dari folder fonts */
+@font-face {
+    font-family: 'poppins';
+    src: url(../fonts/Poppins/Poppins-Regular.woff2) format('woff2'),
+        url(../fonts/Poppins/Poppins-Regular.woff) format('woff');
+}
+
+/* Reset default margin & padding + atur font utama */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+
+/* Header dengan background image */
+header {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================== TOP INFO BAR ================== */
+
+
+/* ================== NAVBAR SECTION ================== */
+
+/* Navbar container utama */
+.navbar {
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  position: sticky;
+  background: rgba(255, 255, 255, 0.116);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Ukuran logo */
+.navbar-brand img {
+    height: 40px;
+}
+
+/* Navigasi untuk hover underline animasi (desktop) */
+.nav {
+    display: grid;
+    grid-template-columns: repeat(var(--count), 1fr);
+    position: relative;
+    background: #123;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Hover line (underline animasi) */
+.hover-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: calc(100% / var(--count));
+    background-color: #4af;
+    transition: left 0.3s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Aturan per posisi menu untuk menggerakkan underline */
+.nav a:nth-of-type(1):hover~.hover-line {
+    left: calc(100% / var(--count) * 0);
+}
+.nav a:nth-of-type(2):hover~.hover-line {
+    left: calc(100% / var(--count) * 1);
+}
+.nav a:nth-of-type(3):hover~.hover-line {
+    left: calc(100% / var(--count) * 2);
+}
+.nav a:nth-of-type(4):hover~.hover-line {
+    left: calc(100% / var(--count) * 3);
+}
+/* Tambahkan lagi jika ada lebih dari 4 menu */
+
+/* ================== DEKSTOP MENU ==================== */
+
+
+.desktopnav li a {
+  color: #eaf6ff;
+  font-size: 1.1rem;
+  padding: 8px 18px;
+  position: relative;
+  transition:
+    color 0.3s cubic-bezier(0.4,0,0.2,1),
+    font-size 0.3s cubic-bezier(0.4,0,0.2,1),
+    background 0.3s cubic-bezier(0.4,0,0.2,1),
+    box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
+    backdrop-filter 0.3s cubic-bezier(0.4,0,0.2,1);
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.desktopnav li a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 24px 0 rgba(255,255,255,0.08);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: -1;
+  border-radius: 8px;
+  backdrop-filter: blur(0px);
+  pointer-events: none;
+}
+
+/* Glass shine effect */
+.desktopnav li a::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -40%;
+  width: 120%;
+  height: 220%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.15) 100%);
+  opacity: 0;
+  transform: skewX(-20deg) translateX(-100%);
+  transition: opacity 0.3s, transform 0.6s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: none;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.desktopnav li a:hover,
+.desktopnav li a:focus {
+  color: #047200;
+  font-weight: 600;
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 4px 24px 0 rgba(255,255,255,0.12);
+}
+
+.desktopnav li a:hover::before,
+.desktopnav li a:focus::before {
+  opacity: 1;
+  backdrop-filter: blur(8px);
+}
+
+.desktopnav li a:hover::after,
+.desktopnav li a:focus::after {
+  opacity: 1;
+  transform: skewX(-20deg) translateX(100%);
+}
+
+
+
+/* ================== HAMBURGER ICON ================== */
+
+#nav-icon3 {
+    width: 35px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+/* Setiap garis hamburger */
+#nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 9px;
+    left: 0;
+    transition: 0.25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) { top: 0px; }
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) { top: 13px; }
+#nav-icon3 span:nth-child(4) { top: 26px; }
+
+/* Efek transisi saat hamburger diklik */
+#nav-icon3.open span:nth-child(1),
+#nav-icon3.open span:nth-child(4) {
+    top: 13px;
+    width: 0%;
+    left: 50%;
+}
+#nav-icon3.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+#nav-icon3.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* ================== MOBILE POPUP MENU ================== */
+
+.popup-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1b1b1b3e;
+    border-top: 1px solid #ddd;
+    z-index: 1001;
+}
+
+/* Setiap link di popup mobile */
+.popup-menu a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s cubic-bezier(0.4,0,0.2,1), font-size 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Efek hover latar belakang hijau bergerak dari kanan */
+.popup-menu a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #d4edda;
+    transition: right 0.3s ease;
+    z-index: -1;
+}
+
+.popup-menu a:hover::before {
+    right: 0;
+}
+.popup-menu a:hover {
+    color: #145c2e;
+    font-size: 1.08rem;
+    font-weight: 600;
+    transform: scale(1.06);
+}
+
+
+
+/* ================== RESPONSIVE BREAKPOINT ================== */
+
+/* Breakpoint saat lebar besar: sembunyikan hamburger & popup */
+@media (min-width: 992px) {
+    #nav-icon3 {
+        display: none;
+    }
+
+    .popup-menu {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        display: flex !important;
+        gap: 15px;
+        margin-bottom: 0;
+    }
+}
+
+
+/* ============ SOCIAL ICONS ============ */
+.social-icons {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: #d4edda;
+}
+
+/* Responsive adjustments for social icons */
+@media (max-width: 768px) {
+  .social-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+  }
+}
+
+/* ================== HERO SECTION ================== */
+.hero-section {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animasi floating (naik turun) */
+@keyframes floating {
+  0% { transform: translateY(0px) perspective(1000px) rotateY(-10deg); }
+  50% { transform: translateY(-15px) perspective(1000px) rotateY(-10deg); }
+  100% { transform: translateY(0px) perspective(1000px) rotateY(-10deg); }
+}
+
+.floating-animation {
+  animation: floating 3s ease-in-out infinite;
+}
+
+/* ================== STATS SECTION ================== */
+.stats-container {
+  background: rgba(0, 0, 0, 0.168) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+  position: relative;
+  padding: 20px 15px;
+  flex: 1;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.stat-number::after {
+  content: "+";
+  position: absolute;
+  right: -15px;
+  top: 5px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-item:nth-child(3) .stat-number::after {
+  display: none;
+}
+
+.stat-item:hover .stat-number::after {
+  opacity: 0.7;
+}
+
+.stat-decimal {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.stat-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.1rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animasi counting */
+@keyframes countUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.stat-number {
+  animation: countUp 0.6s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stats-container {
+    padding: 15px !important;
+  }
+  
+  .stat-item {
+    padding: 15px 10px;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-divider {
+    width: 80%;
+    height: 1px;
+    margin: 10px 0;
+  }
+}
+
+/* ================== MAIN ================== */
+
+/* ============ ABOUT SECTION STYLING ============ */
+/* ============ VIGAZA HERO STYLES ============ */
+.vigaza-hero {
+
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.vigaza-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, 
+              rgba(40, 167, 69, 0.15) 0%, 
+              transparent 40%);
+  pointer-events: none;
+}
+
+.hero-content h1 {
+  font-weight: 800;
+  background: linear-gradient(to right, #fff, #c8f3d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.hero-content .lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.hero-highlights {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-icon {
+  color: #28a745;
+  font-size: 1.2rem;
+}
+
+.hero-image-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hero-image-container:hover {
+  transform: translateY(-5px);
+}
+
+.image-badge {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content .lead {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .vigaza-hero {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .hero-highlights {
+    text-align: left;
+  }
+  
+  .hero-cta .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-cta .btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ================== TELUR AYAM AREA ================== */
+/* Why Quail Eggs Section Styles */
+.why-quail-eggs {
+    position: relative;
+    overflow: hidden;
+}
+
+.why-quail-eggs::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(40, 167, 69, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover .icon-wrapper {
+    background-color: rgba(40, 167, 69, 0.2) !important;
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* ================== Ayam vs Puyuh ================== */
+.telur_ayam_area {
+    padding: 120px 0;
+    position: relative;
+}
+
+.bg-gradient {
+    background: radial-gradient(circle at top left, #ffc10730, transparent 70%);
+}
+
+.comparison-wrapper {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.comparison-box {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    z-index: 1;
+}
+
+.border-end-lg {
+    border-right: 2px solid;
+}
+
+.border-start-lg {
+    border-left: 2px solid;
+}
+
+.egg-image-wrapper {
+    z-index: 2;
+}
+
+.egg-image-center {
+    height: 150px;
+    width: auto;
+}
+
+.nutrisi-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+}
+
+.nutrisi-item:hover {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.nutrisi-item i {
+    font-size: 1.5rem;
+    color: #ffc107;
+}
+
+.nutrisi-item p {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.nutrisi-item h4 {
+    margin: 0;
+    font-weight: 700;
+    color: #ffc107;
+}
+
+@media (max-width: 992px) {
+    .telur_ayam_area {
+        padding: 80px 0;
+    }
+
+    .comparison-wrapper {
+        flex-direction: column;
+    }
+
+    .egg-image-wrapper {
+        position: static !important;
+        transform: none !important;
+        margin: 2rem auto;
+        display: block !important;
+    }
+
+    .egg-image-center {
+        height: 120px;
+    }
+}
+
+/* ================== Founder ================== */
+/* Animation Classes */
+.hover-scale {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.hover-scale:hover {
+  transform: scale(1.2);
+}
+
+.hover-rotate {
+  transition: transform 0.5s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(15deg);
+}
+
+.floating-animation {
+  animation: floating 6s ease-in-out infinite;
+}
+
+.floating-animation-delay {
+  animation: floating 6s ease-in-out 1s infinite;
+}
+
+@keyframes floating {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(0, -15px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Founder Section Specific */
+.founder-content {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.founder-info {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.founder-info:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .founder-content {
+    padding: 2rem !important;
+  }
+  
+  h2.display-4 {
+    font-size: 2.2rem;
+  }
+  
+  .founder-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .founder-info > div:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
