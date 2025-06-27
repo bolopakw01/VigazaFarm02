@@ -20,6 +20,89 @@ body {
   position: relative;
 }
 
+/*=================== IMPROVED BTT STYLING ==================*/
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  background: var(--bs-success);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translateY(40px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  display: flex;
+  animation: bounce 2s infinite;
+}
+
+.back-to-top:hover {
+  background: #ffc107 !important;
+}
+
+.back-to-top:hover i {
+  color: #111;
+  transform: translateY(-3px);
+}
+
+.back-to-top i {
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-8px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(-4px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+}
+
+/* Smooth fade-in transition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* ================== REUSABLE COMPONENTS ================== */
 /* Glassmorphism Effect */
 .glass-effect {

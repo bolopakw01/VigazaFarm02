@@ -7,29 +7,29 @@
  * - Cleaner code structure
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // ==================== MODULAR FUNCTIONS ====================
     const NavbarManager = {
-        init: function() {
+        init: function () {
             this.navbar = document.querySelector('.navbar');
             this.setupScrollEffect();
             this.handleMobileFallback();
             this.checkInitialScroll();
         },
-        
-        setupScrollEffect: function() {
+
+        setupScrollEffect: function () {
             window.addEventListener('scroll', () => {
                 this.navbar.classList.toggle('scrolled', window.scrollY > 50);
             });
         },
-        
-        checkInitialScroll: function() {
+
+        checkInitialScroll: function () {
             if (window.scrollY > 50) {
                 this.navbar.classList.add('scrolled');
             }
         },
-        
-        handleMobileFallback: function() {
+
+        handleMobileFallback: function () {
             if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 const parallaxBg = document.querySelector('.parallax-background');
                 if (parallaxBg) {
@@ -40,56 +40,56 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const MobileMenu = {
-        init: function() {
+        init: function () {
             this.hamburger = document.getElementById('nav-icon3');
             this.popupMenu = document.getElementById('popupMenu');
-            
+
             if (!this.hamburger || !this.popupMenu) return;
-            
+
             this.setupEventListeners();
         },
-        
-        setupEventListeners: function() {
+
+        setupEventListeners: function () {
             this.hamburger.addEventListener('click', this.toggleMenu.bind(this));
-            
+
             // Event delegation for menu links
             this.popupMenu.addEventListener('click', (e) => {
                 if (e.target.tagName === 'A') {
                     this.closeMenu();
                 }
             });
-            
+
             document.addEventListener('click', (e) => {
                 if (!this.hamburger.contains(e.target) && !this.popupMenu.contains(e.target)) {
                     this.closeMenu();
                 }
             });
         },
-        
-        toggleMenu: function() {
+
+        toggleMenu: function () {
             this.hamburger.classList.toggle('open');
             this.popupMenu.classList.toggle('show');
         },
-        
-        closeMenu: function() {
+
+        closeMenu: function () {
             this.hamburger.classList.remove('open');
             this.popupMenu.classList.remove('show');
         }
     };
 
     const CounterAnimation = {
-        init: function() {
-            this.observer = new IntersectionObserver(this.handleIntersection.bind(this), 
+        init: function () {
+            this.observer = new IntersectionObserver(this.handleIntersection.bind(this),
                 { threshold: 0.3 }
             );
-            
+
             const statsSection = document.querySelector('.stats-container');
             if (statsSection) {
                 this.observer.observe(statsSection);
             }
         },
-        
-        handleIntersection: function(entries) {
+
+        handleIntersection: function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     this.animateAllCounters();
@@ -97,43 +97,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         },
-        
-        animateAllCounters: function() {
+
+        animateAllCounters: function () {
             document.querySelectorAll('.stat-number').forEach(number => {
                 const target = parseFloat(number.dataset.count);
                 this.animateCounter(number, target);
             });
         },
-        
-        animateCounter: function(element, target, duration = 1500) {
+
+        animateCounter: function (element, target, duration = 1500) {
             const start = 0;
             const increment = target / (duration / 16);
             let current = start;
-            
+
             const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
                     clearInterval(timer);
                     current = target;
                 }
-                element.textContent = Math.floor(current) === current ? 
+                element.textContent = Math.floor(current) === current ?
                     current : current.toFixed(1);
             }, 16);
         }
     };
 
     const ScrollAnimations = {
-        init: function() {
-            this.observer = new IntersectionObserver(this.handleSections.bind(this), 
+        init: function () {
+            this.observer = new IntersectionObserver(this.handleSections.bind(this),
                 { threshold: 0.1 }
             );
-            
+
             document.querySelectorAll('section').forEach(section => {
                 this.observer.observe(section);
             });
         },
-        
-        handleSections: function(entries) {
+
+        handleSections: function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
@@ -143,13 +143,13 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const HoverEffects = {
-        init: function() {
+        init: function () {
             this.setupSocialIcons();
             this.setupCardHovers();
             this.setupFloatingElements();
         },
-        
-        setupSocialIcons: function() {
+
+        setupSocialIcons: function () {
             // Event delegation for social icons
             document.querySelector('.social-icons')?.addEventListener('mouseover', (e) => {
                 const icon = e.target.closest('a');
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon.style.transform = 'translateY(-5px)';
                 }
             });
-            
+
             document.querySelector('.social-icons')?.addEventListener('mouseout', (e) => {
                 const icon = e.target.closest('a');
                 if (icon) {
@@ -165,8 +165,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         },
-        
-        setupCardHovers: function() {
+
+        setupCardHovers: function () {
             // Event delegation for cards
             document.addEventListener('mouseover', (e) => {
                 const card = e.target.closest('.card');
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     card.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
                 }
             });
-            
+
             document.addEventListener('mouseout', (e) => {
                 const card = e.target.closest('.card');
                 if (card) {
@@ -184,8 +184,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         },
-        
-        setupFloatingElements: function() {
+
+        setupFloatingElements: function () {
             document.querySelectorAll('.floating-animation').forEach(el => {
                 el.style.willChange = 'transform';
             });
@@ -201,10 +201,47 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Clean window load event
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     // Performance tracking or additional optimizations
     if (window.performance) {
-        console.log('Page fully loaded in', 
+        console.log('Page fully loaded in',
             performance.now().toFixed(2), 'ms');
+    }
+});
+
+
+
+// ==================== IMPROVED BTT FUNCTIONALITY ====================
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+// Show/hide button with smooth transition
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add("visible");
+    } else {
+        backToTopBtn.classList.remove("visible");
+    }
+});
+
+// Smooth scroll to top with easing
+backToTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    // Remove focus after click for better UX
+    backToTopBtn.blur();
+});
+
+// Keyboard accessibility
+backToTopBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     }
 });
