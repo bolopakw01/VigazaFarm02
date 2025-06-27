@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <!-- Metadata dasar -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,20 +14,17 @@
   <!-- Bootstrap CSS & Icon -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-
 </head>
 
 <body>
 
-  <!-- ============ TOP INFO BAR ============ -->
-
   <!-- ============ HEADER / NAVBAR ============ -->
-  <header class="backg">
-    <nav class="navbar sticky-top">
+  <header class="fixed-top">
+    <nav class="navbar">
       <div class="container-fluid d-flex justify-content-between align-items-center p-2 px-4">
         <!-- LOGO -->
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img class="vflogo" src="asset/img/logo1.png" alt="Logo" />
+          <img class="vflogo" src="asset/img/logo1.png" alt="Vigaza Farm Logo" />
         </a>
 
         <!-- HAMBURGER (mobile only) -->
@@ -59,26 +55,16 @@
           <a href="portofolio.html"><i class="bi bi-images me-1"></i>Portfolio</a>
           <a href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
         </div>
-
       </div>
     </nav>
+  </header>
 
-    <!-- Beranda -->
-    <!-- Social Icons (Left Side) -->
-    <div class="header-content container">
-      <div class="row align-items-center">
-        <div class="col-md-1 d-none d-md-flex flex-column social-icons">
-          <a href="#"><i class="bi bi-twitter"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-
+  <!-- ============ HERO SECTION dengan background image ============ -->
+  <main class="with-bg-image">
     <!-- ============ HERO SECTION ============ -->
-    <section class="hero-section">
+    <section class="hero-section py-2 ">
       <div class="container">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-5 my-5">
           <!-- Teks Hero (Kiri) -->
           <div class="col-lg-6">
             <div class="text-white rounded-3 p-4">
@@ -104,8 +90,8 @@
 
           <!-- Gambar Hero (Kanan) dengan animasi floating -->
           <div class="col-lg-6">
-            <div class="hero-image position-relat</div>ive floating-animation">
-              <img src="asset/img/eggyok.png" alt="Vigaza Farm"
+            <div class="hero-image position-relative floating-animation">
+              <img src="asset/img/eggyok.png" alt="Vigaza Farm Products"
                 style="max-width: 60%; height: auto; margin-left: 80px;">
             </div>
           </div>
@@ -114,7 +100,7 @@
     </section>
 
     <!-- ============ STATISTICS SECTION ============ -->
-    <section class="container">
+    <section class="container my-5">
       <div
         class="stats-container text-white rounded-4 p-4 d-flex flex-column flex-md-row justify-content-between align-items-center text-center gap-3">
         <div class="stat-item">
@@ -147,10 +133,8 @@
       </div>
     </section>
 
-    <main>
-
-      <!-- ============ HERO SECTION ============ -->
-      <section class="vigaza-hero py-5 my-5"></section>
+    <!-- ============ HERO SECTION ============ -->
+    <section class="vigaza-hero py-5 my-5 ">
       <div class="container">
         <div class="row align-items-center">
           <!-- Image on the Left -->
@@ -198,179 +182,345 @@
           </div>
         </div>
       </div>
-      </section>
+    </section>
 
-      <!-- ================= WHY QUAIL EGGS SECTION ================= -->
-      <section class="why-quail-eggs py-5 my-5">
-        <div class="container">
-          <!-- Section Header -->
-          <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Mengapa Telur Puyuh?</h2>
-            <p class="text-muted mx-auto" style="max-width: 700px;">
-              Telur puyuh memiliki banyak keunggulan dibanding telur lainnya. Berikut beberapa alasan mengapa Anda harus
-              memilih telur puyuh.
-            </p>
-          </div>
-
-          <!-- Features Grid -->
-          <div class="row g-4 justify-content-center">
-            <!-- Feature 1 -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
-                <div class="card-body p-4 text-center">
-                  <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-4 p-3">
-                    <i class="bi bi-bar-chart-fill fs-3"></i>
-                  </div>
-                  <h4 class="fw-bold mb-3">Nutrisi Lebih Tinggi</h4>
-                  <p class="text-muted mb-0">
-                    Telur puyuh mengandung 13.1g protein per 100g, lebih tinggi dari telur ayam. Kaya akan vitamin B12
-                    dan zat besi.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Feature 2 -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
-                <div class="card-body p-4 text-center">
-                  <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-4 p-3">
-                    <i class="bi bi-shield-plus fs-3"></i>
-                  </div>
-                  <h4 class="fw-bold mb-3">Baik Untuk Kesehatan</h4>
-                  <p class="text-muted mb-0">
-                    Mengandung kolin yang baik untuk otak dan antioksidan yang membantu meningkatkan sistem imun tubuh.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Feature 3 -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
-                <div class="card-body p-4 text-center">
-                  <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-4 p-3">
-                    <i class="bi bi-emoji-smile fs-3"></i>
-                  </div>
-                  <h4 class="fw-bold mb-3">Rasa Lebih Lezat</h4>
-                  <p class="text-muted mb-0">
-                    Tekstur lebih lembut dan rasa lebih gurih, cocok untuk berbagai masakan dan camilan sehat.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CTA Button -->
-          <div class="text-center mt-5">
-            <a href="#produk" class="btn btn-success px-4 py-3 fw-bold">
-              <i class="bi bi-cart3 me-2"></i> Lihat Produk Kami
-            </a>
-          </div>
+    <!-- ================= WHY QUAIL EGGS SECTION ================= -->
+    <section class="why-quail-eggs py-5 my-5 bg-light">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">Mengapa Telur Puyuh?</h2>
+          <p class="text-muted mx-auto" style="max-width: 700px;">
+            Telur puyuh memiliki banyak keunggulan dibanding telur lainnya. Berikut beberapa alasan mengapa Anda harus
+            memilih telur puyuh.
+          </p>
         </div>
-      </section>
 
-      <!-- ================= Telur Ayam vs Puyuh start ================= -->
-      <section class="telur_ayam_area position-relative overflow-hidden text-light">
-        <div class=" position-absolute w-100 h-100 top-0 start-0 z-0"></div>
-        <div class="container position-relative z-1">
-          <div class="text-center mb-5" data-aos="fade-down">
-            <h2 class="display-4 fw-bold mb-3">Telur Ayam vs Telur Puyuh</h2>
-            <p class="lead text-light opacity-75">Perbandingan nilai gizi antara telur ayam dan telur puyuh</p>
+        <!-- Features Grid -->
+        <div class="row g-4 justify-content-center">
+          <!-- Feature 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+              <div class="card-body p-4 text-center">
+                <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-4 p-3">
+                  <i class="bi bi-bar-chart-fill fs-3"></i>
+                </div>
+                <h4 class="fw-bold mb-3">Nutrisi Lebih Tinggi</h4>
+                <p class="text-muted mb-0">
+                  Telur puyuh mengandung 13.1g protein per 100g, lebih tinggi dari telur ayam. Kaya akan vitamin B12
+                  dan zat besi.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div
-            class="d-flex flex-column flex-lg-row justify-content-center align-items-stretch position-relative comparison-wrapper">
-            <!-- Telur Ayam -->
-            <div class="comparison-box border-end-lg border-warning">
-              <div class="d-flex align-items-center mb-4">
-                <i class="bi bi-egg-fried fs-1 text-warning me-3"></i>
-                <h3 class="text-warning mb-0">Telur Ayam</h3>
+          <!-- Feature 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+              <div class="card-body p-4 text-center">
+                <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-4 p-3">
+                  <i class="bi bi-shield-plus fs-3"></i>
+                </div>
+                <h4 class="fw-bold mb-3">Baik Untuk Kesehatan</h4>
+                <p class="text-muted mb-0">
+                  Mengandung kolin yang baik untuk otak dan antioksidan yang membantu meningkatkan sistem imun tubuh.
+                </p>
               </div>
-              <ul class="list-unstyled">
-                <li class="nutrisi-item" data-aos="fade-right">
-                  <i class="bi bi-droplet-fill"></i>
-                  <div>
-                    <p>Protein dalam 100g</p>
-                    <h4>12.6g</h4>
-                  </div>
-                </li>
-                <li class="nutrisi-item" data-aos="fade-right">
-                  <i class="bi bi-fire"></i>
-                  <div>
-                    <p>Kalori</p>
-                    <h4>143 kcal</h4>
-                  </div>
-                </li>
-                <li class="nutrisi-item" data-aos="fade-right">
-                  <i class="bi bi-capsule"></i>
-                  <div>
-                    <p>Lemak</p>
-                    <h4>9.5g</h4>
-                  </div>
-                </li>
-              </ul>
             </div>
+          </div>
 
-            <!-- Gambar Telur Tengah -->
-            <div class="egg-image-wrapper position-absolute top-50 start-50 translate-middle d-none d-lg-block">
-              <img data-aos="zoom-in" src="asset/img/egg.png" alt="Perbandingan telur"
-                class="img-fluid egg-image-center">
-            </div>
-
-            <!-- Telur Puyuh -->
-            <div class="comparison-box border-start-lg border-warning text-end">
-              <div class="d-flex align-items-center justify-content-end mb-4">
-                <h3 class="text-warning mb-0 me-3">Telur Puyuh</h3>
-                <i class="bi bi-egg fs-1 text-warning"></i>
+          <!-- Feature 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm hover-shadow transition-all">
+              <div class="card-body p-4 text-center">
+                <div class="icon-wrapper bg-success bg-opacity-10 text-success rounded-circle mx-auto mb-4 p-3">
+                  <i class="bi bi-emoji-smile fs-3"></i>
+                </div>
+                <h4 class="fw-bold mb-3">Rasa Lebih Lezat</h4>
+                <p class="text-muted mb-0">
+                  Tekstur lebih lembut dan rasa lebih gurih, cocok untuk berbagai masakan dan camilan sehat.
+                </p>
               </div>
-              <ul class="list-unstyled">
-                <li class="nutrisi-item flex-row-reverse text-end" data-aos="fade-left">
-                  <i class="bi bi-droplet-fill"></i>
-                  <div>
-                    <p>Protein dalam 100g</p>
-                    <h4>13.1g</h4>
-                  </div>
-                </li>
-                <li class="nutrisi-item flex-row-reverse text-end" data-aos="fade-left">
-                  <i class="bi bi-fire"></i>
-                  <div>
-                    <p>Kalori</p>
-                    <h4>158 kcal</h4>
-                  </div>
-                </li>
-                <li class="nutrisi-item flex-row-reverse text-end" data-aos="fade-left">
-                  <i class="bi bi-capsule"></i>
-                  <div>
-                    <p>Lemak</p>
-                    <h4>11.1g</h4>
-                  </div>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ================= FOUNDER SECTION ================= -->
-      <section class="founder-section container-fluid">
-        <div class="container py-5">
-          <div class="row justify-content-center align-items-center g-5">
-            <div class="col-12"></div>
-            <div class="founder-content px-3 px-md-5 py-5 bg-white rounded-2 shadow-none position-relative"
-              style="box-shadow:none; border-radius:0;">
+        <!-- CTA Button -->
+        <div class="text-center mt-5">
+          <a href="#produk" class="btn btn-success px-4 py-3 fw-bold">
+            <i class="bi bi-cart3 me-2"></i> Lihat Produk Kami
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Telur Ayam vs Puyuh start ================= -->
+    <section class="telur_ayam_area position-relative overflow-hidden text-light ">
+      <div class=" position-absolute w-100 h-100 top-0 start-0 z-0"></div>
+      <div class="container position-relative z-1">
+        <div class="text-center mb-5" data-aos="fade-down">
+          <h2 class="display-4 fw-bold mb-3">Telur Ayam vs Telur Puyuh</h2>
+          <p class="lead text-light opacity-75">Perbandingan nilai gizi antara telur ayam dan telur puyuh</p>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-lg-row justify-content-center align-items-stretch position-relative comparison-wrapper">
+          <!-- Telur Ayam -->
+          <div class="comparison-box border-end-lg border-warning">
+            <div class="d-flex align-items-center mb-4">
+              <i class="bi bi-egg-fried fs-1 text-warning me-3"></i>
+              <h3 class="text-warning mb-0">Telur Ayam</h3>
+            </div>
+            <ul class="list-unstyled">
+              <li class="nutrisi-item" data-aos="fade-right">
+                <i class="bi bi-droplet-fill"></i>
+                <div>
+                  <p>Protein dalam 100g</p>
+                  <h4>12.6g</h4>
+                </div>
+              </li>
+              <li class="nutrisi-item" data-aos="fade-right">
+                <i class="bi bi-fire"></i>
+                <div>
+                  <p>Kalori</p>
+                  <h4>143 kcal</h4>
+                </div>
+              </li>
+              <li class="nutrisi-item" data-aos="fade-right">
+                <i class="bi bi-capsule"></i>
+                <div>
+                  <p>Lemak</p>
+                  <h4>9.5g</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Gambar Telur Tengah -->
+          <div class="egg-image-wrapper position-absolute top-50 start-50 translate-middle d-none d-lg-block">
+            <img data-aos="zoom-in" src="asset/img/egg.png" alt="Perbandingan telur" class="img-fluid egg-image-center">
+          </div>
+
+          <!-- Telur Puyuh -->
+          <div class="comparison-box border-start-lg border-warning text-end">
+            <div class="d-flex align-items-center justify-content-end mb-4">
+              <h3 class="text-warning mb-0 me-3">Telur Puyuh</h3>
+              <i class="bi bi-egg fs-1 text-warning"></i>
+            </div>
+            <ul class="list-unstyled">
+              <li class="nutrisi-item flex-row-reverse text-end" data-aos="fade-left">
+                <i class="bi bi-droplet-fill"></i>
+                <div>
+                  <p>Protein dalam 100g</p>
+                  <h4>13.1g</h4>
+                </div>
+              </li>
+              <li class="nutrisi-item flex-row-reverse text-end" data-aos="fade-left">
+                <i class="bi bi-fire"></i>
+                <div>
+                  <p>Kalori</p>
+                  <h4>158 kcal</h4>
+                </div>
+              </li>
+              <li class="nutrisi-item flex-row-reverse text-end" data-aos="fade-left">
+                <i class="bi bi-capsule"></i>
+                <div>
+                  <p>Lemak</p>
+                  <h4>11.1g</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <section>
+
+    <!-- ========== CUSTOMER REVIEWS MARQUEE ========== -->
+    <section class="customer-reviews py-5 bg-light overflow-hidden">
+      <div class="container position-relative">
+        <hr class="divider border border-success border-3 opacity-75">
+        <div class="text-center mb-5">
+          <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 mb-3">
+            <i class="bi bi-chat-square-quote-fill me-2"></i>Testimonial
+          </span>
+          <h2 class="fw-bold mb-3">Apa Yang Dikatakan Customer Kami</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Lihat apa kata pelanggan tentang produk dan layanan Vigaza Farm
+          </p>
+        </div>
+
+        <!-- Running Text Wrapper with Gradient Overlay -->
+        <div class="review-marquee-wrapper position-relative">
+          <div class="review-marquee" onmouseover="this.classList.add('paused')"
+            onmouseout="this.classList.remove('paused')">
+            <div class="marquee-track d-flex">
+
+              <!-- Review Cards - Group 1 (Original) -->
+              <div class="card review-card shadow-sm me-4">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="50"
+                      height="50" alt="Customer">
+                    <div>
+                      <h6 class="mb-1 fw-bold">Budi Santoso</h6>
+                      <div class="text-warning small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="text-muted ms-2">1 minggu lalu</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mb-0 text-wrap" style="white-space: normal;">"Telur puyuhnya selalu fresh dan berkualitas.
+                    Sudah langganan 3 bulan dan tidak pernah kecewa dengan kualitasnya!"</p>
+                </div>
+              </div>
+
+              <div class="card review-card shadow-sm me-4">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3" width="50"
+                      height="50" alt="Customer">
+                    <div>
+                      <h6 class="mb-1 fw-bold">Ani Wijaya</h6>
+                      <div class="text-warning small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <span class="text-muted ms-2">3 hari lalu</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mb-0 text-wrap" style="white-space: normal;">"Packing sangat rapi dan aman. Telur sampai
+                    dalam kondisi utuh semua tanpa ada yang pecah!"</p>
+                </div>
+              </div>
+
+              <div class="card review-card shadow-sm me-4">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50"
+                      height="50" alt="Customer">
+                    <div>
+                      <h6 class="mb-1 fw-bold">Dewi Lestari</h6>
+                      <div class="text-warning small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="text-muted ms-2">2 minggu lalu</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mb-0 text-wrap" style="white-space: normal;">"Pelayanan sangat cepat dan harga kompetitif.
+                    Telur selalu fresh langsung dari peternakan!"</p>
+                </div>
+              </div>
+
+              <div class="card review-card shadow-sm me-4">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle me-3" width="50"
+                      height="50" alt="Customer">
+                    <div>
+                      <h6 class="mb-1 fw-bold">Agus Setiawan</h6>
+                      <div class="text-warning small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <span class="text-muted ms-2">1 bulan lalu</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mb-0 text-wrap" style="white-space: normal;">"Kualitas telur sangat konsisten, sudah
+                    langganan 2 tahun. Pengiriman selalu tepat waktu."</p>
+                </div>
+              </div>
+
+              <!-- Duplicate cards for seamless looping -->
+              <div class="card review-card shadow-sm me-4">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="50"
+                      height="50" alt="Customer">
+                    <div>
+                      <h6 class="mb-1 fw-bold">Budi Santoso</h6>
+                      <div class="text-warning small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <span class="text-muted ms-2">1 minggu lalu</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mb-0 text-wrap" style="white-space: normal;">"Telur puyuhnya selalu fresh dan berkualitas.
+                    Sudah langganan 3 bulan dan tidak pernah kecewa dengan kualitasnya!"</p>
+                </div>
+              </div>
+
+              <div class="card review-card shadow-sm me-4">
+                <div class="card-body p-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3" width="50"
+                      height="50" alt="Customer">
+                    <div>
+                      <h6 class="mb-1 fw-bold">Ani Wijaya</h6>
+                      <div class="text-warning small">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <span class="text-muted ms-2">3 hari lalu</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mb-0 text-wrap" style="white-space: normal;">"Packing sangat rapi dan aman. Telur sampai
+                    dalam kondisi utuh semua tanpa ada yang pecah!"</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="gradient-overlay start-0"></div>
+          <div class="gradient-overlay end-0"></div>
+        </div>
+        <hr class="divider border border-success border-3 opacity-75">
+      </div>
+    </section>
+
+    <!-- ================= FOUNDER SECTION ================= -->
+    <div class="founder-section container-fluid bggw py-4">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12">
+            <div class="founder-content px-4 px-md-5 py-4 bg-white rounded-2 shadow position-relative"
+              style="max-width: 900px; margin: 0 auto; border-radius:0;">
 
               <!-- Quote Icon -->
-              <div class="quote-icon mb-4 text-success">
-                <i class="bi bi-quote display-3 opacity-25"></i>
+              <div class="quote-icon mb-3 text-success">
+                <i class="bi bi-quote fs-1 opacity-25"></i>
               </div>
 
               <!-- Founder Quote -->
-              <blockquote class="mb-4">
-                <h2 class="display-4 fw-bold mb-4 text-dark">
+              <blockquote class="mb-3">
+                <h2 class="fs-2 fw-bold mb-3 text-dark">
                   "Kualitas produk dimulai dari <span class="text-success">cinta</span> terhadap apa yang kita kerjakan"
                 </h2>
-                <p class="lead text-muted mb-5">
+                <p class="text-muted mb-4" style="font-size: 1rem;">
                   Sejak 2015, Vigaza Farm berkomitmen untuk menyediakan telur puyuh terbaik dengan standar kualitas
                   tertinggi. Kami percaya bahwa peternakan yang etis dan berkelanjutan akan menghasilkan produk yang
                   lebih sehat dan bergizi.
@@ -378,125 +528,462 @@
               </blockquote>
 
               <!-- Founder Info -->
-              <div class="founder-info d-flex align-items-center mt-5 bg-tansparant p-3 rounded-2 border-0 shadow-none">
-                <div class="me-4">
-                  <img src="https://placehold.co/120x120/2d3748/FFF?text=Hardi" alt="Hardi - Founder Vigaza"
-                    class="rounded-circle border border-4 border-success object-fit-cover shadow-sm hover-scale"
-                    width="90" height="90">
+              <div
+                class="founder-info d-flex align-items-center mt-4 bg-transparent p-3 rounded-2 border-0 shadow-none">
+                <div class="me-3">
+                  <img src="https://placehold.co/80x80/2d3748/FFF?text=Hardi" alt="Hardi - Founder Vigaza"
+                    class="rounded-circle border border-3 border-success object-fit-cover shadow-sm hover-scale"
+                    width="70" height="70">
                 </div>
                 <div class="flex-grow-1">
-                  <h5 class="mb-1 fw-bold">Hardi</h5>
-                  <p class="text-muted mb-2">Founder & CEO Vigaza Farm</p>
+                  <h5 class="mb-1 fw-bold" style="font-size: 1rem;">Hardi</h5>
+                  <p class="text-muted mb-2" style="font-size: 0.875rem;">Founder & CEO Vigaza Farm</p>
                   <div class="social-links">
-                    <a href="#" class="text-success me-3 hover-scale">
-                      <i class="bi bi-instagram fs-5"></i>
+                    <a href="#" class="text-success me-2 hover-scale">
+                      <i class="bi bi-instagram"></i>
                     </a>
-                    <a href="#" class="text-success me-3 hover-scale">
-                      <i class="bi bi-linkedin fs-5"></i>
+                    <a href="#" class="text-success me-2 hover-scale">
+                      <i class="bi bi-linkedin"></i>
                     </a>
                     <a href="#" class="text-success hover-scale">
-                      <i class="bi bi-twitter-x fs-5"></i>
+                      <i class="bi bi-twitter-x"></i>
                     </a>
                   </div>
                 </div>
                 <div class="ms-auto">
                   <div class="bg-success bg-opacity-10 p-2 rounded-3 hover-rotate">
-                    <i class="bi bi-award-fill text-success fs-4"></i>
+                    <i class="bi bi-award-fill text-success"></i>
                   </div>
                 </div>
               </div>
 
               <!-- Company Badges -->
-              <div class="d-flex flex-wrap gap-3 mt-4">
-                <span class="badge bg-success bg-opacity-10 text-success py-2 px-3">
-                  <i class="bi bi-check-circle-fill me-2"></i>Bersertifikat Halal
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <span class="badge bg-success bg-opacity-10 text-success py-1 px-2" style="font-size: 0.75rem;">
+                  <i class="bi bi-check-circle-fill me-1"></i>Bersertifikat Halal
                 </span>
-                <span class="badge bg-success bg-opacity-10 text-success py-2 px-3">
-                  <i class="bi bi-shield-check me-2"></i>Higienis Terjamin
+                <span class="badge bg-success bg-opacity-10 text-success py-1 px-2" style="font-size: 0.75rem;">
+                  <i class="bi bi-shield-check me-1"></i>Higienis Terjamin
                 </span>
-                <span class="badge bg-success bg-opacity-10 text-success py-2 px-3">
-                  <i class="bi bi-tree-fill me-2"></i>Ramah Lingkungan
+                <span class="badge bg-success bg-opacity-10 text-success py-1 px-2" style="font-size: 0.75rem;">
+                  <i class="bi bi-tree-fill me-1"></i>Ramah Lingkungan
                 </span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+    </div>
+
+    <!-- ================= FAQ SECTION ================= -->
+    <div class="container-fluid py-5 bg-light">
+      <div class="container">
+        <hr class="divider border border-success border-3 opacity-75 mb-5">
+        <div class="row g-5 align-items-center">
+          <!-- FAQ Text Area -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 mb-3 rounded-pill">
+              <i class="bi bi-question-circle-fill me-2"></i>FAQ
+            </span>
+            <h2 class="display-6 fw-bold mb-4">Pertanyaan yang Sering Diajukan</h2>
+
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <!-- FAQ Item -->
+              <div class="accordion-item bg-white border rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold text-success" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Bagaimana cara memesan produk VigazaFarm?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Anda bisa memesan produk kami melalui website ini, WhatsApp, atau langsung mengunjungi peternakan
+                    kami. Untuk pemesanan online, cukup pilih produk dan ikuti proses checkout.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-white border rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold text-success" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Apakah produk VigazaFarm halal?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Ya, semua produk kami telah bersertifikat halal dari MUI. Kami menjalankan proses produksi sesuai
+                    dengan standar halal yang berlaku.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-white border rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold text-success" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Berapa lama kesegaran telur puyuh bertahan?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Telur puyuh kami dapat bertahan segar hingga 3 minggu jika disimpan di kulkas dengan suhu 4°C. Untuk
+                    kualitas terbaik, kami sarankan dikonsumsi dalam 2 minggu.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-white border rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold text-success" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#faq4">
+                    Apakah VigazaFarm menerima kunjungan langsung?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Ya, kami menerima kunjungan dengan perjanjian terlebih dahulu. Anda bisa menghubungi kami via
+                    WhatsApp untuk mengatur jadwal kunjungan.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-success px-4 py-3 mt-4 rounded-pill shadow-sm">
+              Tanya Lagi
+            </a>
+          </div>
+
+          <!-- FAQ Illustrations -->
+          <div class="col-lg-6 d-none d-lg-block">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="rounded-4 bg-white text-center shadow-sm p-4" data-aos="fade" data-aos-delay="200">
+                  <img src="https://placehold.co/90x90/2d3748/FFF?text=FAQ+1"
+                    class="rounded-circle mb-3 object-fit-cover" width="90" height="90" alt="Peternakan Puyuh">
+                  <h6 class="mb-0">Peternakan Modern</h6>
+                </div>
+                <div class="rounded-4 bg-white text-center shadow-sm p-4 mt-4" data-aos="fade" data-aos-delay="300">
+                  <img src="https://placehold.co/90x90/2d3748/FFF?text=FAQ+2"
+                    class="rounded-circle mb-3 object-fit-cover" width="90" height="90" alt="Telur Segar">
+                  <h6 class="mb-0">Telur Segar</h6>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex align-items-center">
+                <div class="rounded-4 bg-white text-center shadow-sm p-4 w-100" data-aos="fade" data-aos-delay="400">
+                  <img src="https://placehold.co/90x90/2d3748/FFF?text=FAQ+3"
+                    class="rounded-circle mb-3 object-fit-cover" width="90" height="90" alt="Tim Profesional">
+                  <h6 class="mb-0">Tim Profesional</h6>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Background Pattern -->
-        <div class="position-absolute bottom-0 start-0 w-100 h-50 bg-success bg-opacity-5 z-n1"></div>
-      </section>
+        <hr class="divider border border-success border-3 opacity-75 mt-5">
+      </div>
+    </div>
+
+
+    <!-- ========== TEAM SECTION WITH GRAY SOCIAL ICONS ========== -->
+    <section class="team-section py-5 bggw">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 mb-3 rounded-pill">
+            <i class="bi bi-people-fill me-2"></i>Tim Kami
+          </span>
+          <h2 class="fw-bold mb-3">Kenali Tim di Balik Website Vigaza Farm</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Tim profesional yang berdedikasi untuk website Farm terbaik.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card team-card h-100 border-0 shadow-sm text-center p-4">
+              <img src="asset/img/team/BKW.svg" class="rounded-circle mx-auto mb-3" width="120" height="120"
+                alt="Bolopa K.W">
+              <div class="card-body d-flex flex-column justify-content-between px-3">
+                <div>
+                  <h5 class="fw-bold mb-1">Bolopa K.W</h5>
+                  <p class="text-secondary small mb-2">23.02.1020</p>
+                  <p class="text-muted mb-4">FullStack Developer</p>
+                </div>
+                <div class="social-icons d-flex justify-content-center gap-3 mt-auto">
+                  <a href="#" class="text-gray"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-youtube"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-twitter-x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card team-card h-100 border-0 shadow-sm text-center p-4">
+              <img src="asset/img/team/SA.svg" class="rounded-circle mx-auto mb-3" width="120" height="120"
+                alt="Siska Anwar">
+              <div class="card-body d-flex flex-column justify-content-between px-3">
+                <div>
+                  <h5 class="fw-bold mb-1">Siska Anwar</h5>
+                  <p class="text-secondary small mb-2">22.02.0840</p>
+                  <p class="small text-muted mb-4">CEO VigazaFarm</p>
+                </div>
+                <div class="social-icons d-flex justify-content-center gap-3 mt-auto">
+                  <a href="#" class="text-gray"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-youtube"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-twitter-x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card team-card h-100 border-0 shadow-sm text-center p-4">
+              <img src="asset/img/team/MF.svg" class="rounded-circle mx-auto mb-3" width="120" height="120" alt="Rizky">
+              <div class="card-body d-flex flex-column justify-content-between px-3">
+                <div>
+                  <h5 class="fw-bold mb-1">Rizky Kopling</h5>
+                  <p class="text-secondary small mb-2">23.02.1034</p>
+                  <p class="small text-muted mb-4">Front End & Design</p>
+                </div>
+                <div class="social-icons d-flex justify-content-center gap-3 mt-auto">
+                  <a href="#" class="text-gray"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-youtube"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="text-gray"><i class="bi bi-twitter-x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT & MAP SECTION ========== -->
+    <section class="contact-map-section py-6 bg-white position-relative">
+      <div class="container mb-5 py-5">
+        <div class="mb-4">
+          <span class="badge bg-success bg-opacity-10 text-success px-4 py-2 rounded-pill mb-3">
+            <i class="bi bi-geo-alt-fill me-1"></i>Kontak & Media Sosial
+          </span>
+          <h2 class="fw-bold display-6 mb-3">Kunjungi Vigaza Farm</h2>
+          <p class="text-muted lead mb-4">Kami siap melayani Anda dengan produk ternak berkualitas tinggi.</p>
+        </div>
+        <div class="row g-5 align-items-center">
+          <!-- Google Maps (Larger Version) -->
+          <div class="col-lg-7">
+            <div class="map-container rounded-4 overflow-hidden shadow-lg position-relative" style="height: 450px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.4567890123456!2d110.3456789!3d-7.7654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDUnNTUuNiJTIDExMMKwMjAnNDUuNiJF!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
+                class="map-iframe w-100 h-100" style="border:0;" allowfullscreen="" loading="lazy">
+              </iframe>
+              <div class="map-overlay"></div>
+              <a href="https://maps.app.goo.gl/9bYZhT1xGzWbwFvRA"
+                class="btn btn-success btn-sm position-absolute bottom-0 end-0 m-3" target="_blank">
+                <i class="bi bi-geo-alt-fill me-1"></i> Lihat Lokasi
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Info & Social -->
+          <div class="col-lg-5">
+            <div class="contact-content ps-lg-4">
+
+              <div class="contact-info bg-light p-4 rounded-4 shadow-sm mb-4">
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-3">
+                    <div class="d-flex align-items-start">
+                      <div class="icon-wrapper bg-success bg-opacity-10 text-success me-3">
+                        <i class="bi bi-geo-alt-fill fs-5"></i>
+                      </div>
+                      <div>
+                        <h6 class="mb-1 fw-semibold">Alamat</h6>
+                        <p class="mb-0 text-muted small">
+                          Jl. Gading Raya, RT.03/RW.18, Palgading, Sinduharjo,<br>
+                          Kec. Ngaglik, Kabupaten Sleman, D.I. Yogyakarta 55581
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-3">
+                    <div class="d-flex align-items-start">
+                      <div class="icon-wrapper bg-success bg-opacity-10 text-success me-3">
+                        <i class="bi bi-envelope-fill fs-5"></i>
+                      </div>
+                      <div>
+                        <h6 class="mb-1 fw-semibold">Email</h6>
+                        <a href="mailto:vigazafarm@gmail.com" class="text-muted small">vigazafarm@gmail.com</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="d-flex align-items-start">
+                      <div class="icon-wrapper bg-success bg-opacity-10 text-success me-3">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                      </div>
+                      <div>
+                        <h6 class="mb-1 fw-semibold">WhatsApp</h6>
+                        <a href="https://wa.me/6281234567890" class="text-muted small">+62 812-3456-7890</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="social-platforms mb-4">
+                <h6 class="fw-semibold mb-3">Ikuti Kami:</h6>
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="https://www.facebook.com/vigazafarm" class="social-icon facebook" target="_blank"
+                    title="Facebook">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="https://www.instagram.com/vigazafarm/" class="social-icon instagram" target="_blank"
+                    title="Instagram">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@vigazafarm" class="social-icon tiktok" target="_blank"
+                    title="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@vigazafarm" class="social-icon youtube" target="_blank"
+                    title="YouTube">
+                    <i class="bi bi-youtube"></i>
+                  </a>
+                  <a href="https://linktr.ee/vigazafarm" class="social-icon linktree" target="_blank" title="Linktree">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="marketplaces">
+                <h6 class="fw-semibold mb-3">Temukan Produk Kami di:</h6>
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="#" class="ecom-icon shopee" title="Shopee">
+                    <img src="asset/img/icons/s.png" alt="Shopee" width="22">
+                  </a>
+                  <a href="#" class="ecom-icon tokopedia" title="Tokopedia">
+                    <img src="asset/img/icons/t.png" alt="Tokopedia" width="22">
+                  </a>
+                  <a href="#" class="ecom-icon lazada" title="Lazada">
+                    <img src="asset/img/icons/l.png" alt="Lazada" width="22">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+ <!-- ================= FOOTER SECTION ================= -->
+<footer class="footer text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <!-- Brand & Deskripsi -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <img src="asset/img/icon.png" alt="Vigaza Logo" class="img-fluid mb-3" style="max-height: 60px;">
+          <h4 class="fw-bold text-success">Vigaza Farm</h4>
+          <p class="small text-white-50 mt-3 pe-3">
+            Penyedia produk puyuh berkualitas: telur segar, daging, dan layanan edukatif. Komitmen kami adalah mutu
+            dan pelayanan terbaik.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigasi -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="fw-semibold text-uppercase text-success mb-3">Navigasi</h6>
+        <ul class="list-unstyled small footer-links">
+          <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none hover-success">Beranda</a></li>
+          <li class="mb-2"><a href="aboutus.html" class="text-white-50 text-decoration-none hover-success">Tentang Kami</a></li>
+          <li class="mb-2"><a href="ourwork.html" class="text-white-50 text-decoration-none hover-success">Galeri</a></li>
+          <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none hover-success">Kontak</a></li>
+          <li class="mb-2"><a href="blog.html" class="text-white-50 text-decoration-none hover-success">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-semibold text-uppercase text-success mb-3">Kontak</h6>
+        <ul class="list-unstyled small text-white-50 footer-contact">
+          <li class="mb-3 d-flex">
+            <i class="bi bi-geo-alt-fill text-success me-2 mt-1"></i>
+            <span>Jl. Gading Raya, Palgading, Sinduharjo, Sleman 55581</span>
+          </li>
+          <li class="mb-3 d-flex">
+            <i class="bi bi-envelope-fill text-success me-2 mt-1"></i>
+            <a href="mailto:vigazafarm@gmail.com" class="text-white-50 text-decoration-none hover-success">vigazafarm@gmail.com</a>
+          </li>
+          <li class="d-flex">
+            <i class="bi bi-whatsapp text-success me-2 mt-1"></i>
+            <a href="https://wa.me/6281234567890" class="text-white-50 text-decoration-none hover-success">+62 812-3456-7890</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sosial Media & Newsletter -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-semibold text-uppercase text-success mb-3">Ikuti Kami</h6>
+        <div class="social-icons d-flex flex-wrap gap-3 mb-4">
+          <a href="https://www.facebook.com/vigazafarm" class="social-circle" title="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/vigazafarm/" class="social-circle" title="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@vigazafarm" class="social-circle" title="YouTube">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://www.tiktok.com/@vigazafarm" class="social-circle" title="TikTok">
+            <i class="bi bi-tiktok"></i>
+          </a>
+        </div>
+
+        <h6 class="fw-semibold text-uppercase text-success mb-3">Newsletter</h6>
+        <form class="newsletter-form">
+          <div class="input-group mb-2">
+            <input type="email" class="form-control bg-black border-success text-white" placeholder="Email Anda">
+            <button class="btn btn-success" type="submit"><i class="bi bi-send-fill"></i></button>
+          </div>
+          <p class="small text-white-50">Dapatkan update terbaru dari kami.</p>
+        </form>
+      </div>
+    </div>
+
+    <hr class="divider border-success opacity-75 my-4">
+
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start small text-white-50">
+        &copy; 2025 <strong class="text-success">Vigaza Farm</strong>. All rights reserved.
+      </div>
+      <div class="col-md-6 text-center text-md-end small text-white-50">
+        Designed with <i class="bi bi-heart-fill text-danger"></i> in Sleman
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 
-    </main>
+  <!-- ============ JAVASCRIPT SECTION ============ -->
+  <!-- jQuery & Bootstrap Bundle -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    <!-- ============ JAVASCRIPT SECTION ============ -->
-    <!-- jQuery & Bootstrap Bundle -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script Toggle Hamburger Menu -->
-    <script>
-      $(document).ready(function () {
-        // Klik hamburger untuk buka/tutup menu mobile
-        $('#nav-icon3').click(function () {
-          $(this).toggleClass('open');
-          $('#popupMenu').slideToggle(200);
-        });
-
-        // Klik salah satu link: tutup menu popup
-        $('#popupMenu a').click(function () {
-          $('#nav-icon3').removeClass('open');
-          $('#popupMenu').slideUp(200);
-        });
-
-        // Klik luar area menu: tutup popup juga
-        $(document).click(function (e) {
-          if (!$(e.target).closest('#nav-icon3, #popupMenu').length) {
-            $('#nav-icon3').removeClass('open');
-            $('#popupMenu').slideUp(200);
-          }
-        });
-      });
-    </script>
-    <script>
-      // Animasi counting numbers
-      document.addEventListener('DOMContentLoaded', function () {
-        const statNumbers = document.querySelectorAll('.stat-number');
-
-        const animateCount = (element) => {
-          const target = parseFloat(element.getAttribute('data-count'));
-          const duration = 1500;
-          const start = 0;
-          const increment = target / (duration / 16);
-          let current = start;
-
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-              clearInterval(timer);
-              current = target;
-            }
-            element.textContent = Math.floor(current) === current ? current : current.toFixed(1);
-          }, 16);
-        };
-
-        // Trigger animasi ketika elemen masuk ke viewport
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              animateCount(entry.target);
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.3 });
-
-        statNumbers.forEach(number => {
-          observer.observe(number);
-        });
-      });
-    </script>
+  <script src="asset/js/main.js"></script>
 
 </body>
 

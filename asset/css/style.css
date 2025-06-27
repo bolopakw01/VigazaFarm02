@@ -1,103 +1,101 @@
 /* Font Poppins dari folder fonts */
 @font-face {
-    font-family: 'poppins';
-    src: url(../fonts/Poppins/Poppins-Regular.woff2) format('woff2'),
-        url(../fonts/Poppins/Poppins-Regular.woff) format('woff');
+  font-family: 'poppins';
+  src: url(../fonts/Poppins/Poppins-Regular.woff2) format('woff2'),
+    url(../fonts/Poppins/Poppins-Regular.woff) format('woff');
 }
 
 /* Reset default margin & padding + atur font utama */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'poppins';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins';
 }
 
-/* Header dengan background image */
-header {
-    background-image: url('../img/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* Body styling */
+body {
+  min-height: 100vh;
+  position: relative;
 }
 
-/* ================== TOP INFO BAR ================== */
+.with-bg-image {
+  position: relative;
+  overflow: hidden;
+  background-image: url('../img/background1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Untuk efek parallax */
+  z-index: 1;
+}
 
+/* Overlay untuk membuat teks lebih terbaca */
+.with-bg-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  /* Sesuaikan opacity sesuai kebutuhan */
+  z-index: -1;
+}
 
 /* ================== NAVBAR SECTION ================== */
-
 /* Navbar container utama */
 .navbar {
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  position: sticky;
+  transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.116);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+/* Navbar saat di-scroll */
+.navbar.scrolled {
+  background: linear-gradient(90deg, #178d33 0%, #218d45 100%) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Ukuran logo */
 .navbar-brand img {
-    height: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
 }
 
-/* Navigasi untuk hover underline animasi (desktop) */
-.nav {
-    display: grid;
-    grid-template-columns: repeat(var(--count), 1fr);
-    position: relative;
-    background: #123;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 1.5rem;
-    font-weight: 300;
+/* Logo saat di-scroll */
+.navbar.scrolled .navbar-brand img {
+  height: 35px;
 }
-
-/* Hover line (underline animasi) */
-.hover-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: calc(100% / var(--count));
-    background-color: #4af;
-    transition: left 0.3s ease;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* Aturan per posisi menu untuk menggerakkan underline */
-.nav a:nth-of-type(1):hover~.hover-line {
-    left: calc(100% / var(--count) * 0);
-}
-.nav a:nth-of-type(2):hover~.hover-line {
-    left: calc(100% / var(--count) * 1);
-}
-.nav a:nth-of-type(3):hover~.hover-line {
-    left: calc(100% / var(--count) * 2);
-}
-.nav a:nth-of-type(4):hover~.hover-line {
-    left: calc(100% / var(--count) * 3);
-}
-/* Tambahkan lagi jika ada lebih dari 4 menu */
 
 /* ================== DEKSTOP MENU ==================== */
-
-
 .desktopnav li a {
   color: #eaf6ff;
   font-size: 1.1rem;
   padding: 8px 18px;
   position: relative;
   transition:
-    color 0.3s cubic-bezier(0.4,0,0.2,1),
-    font-size 0.3s cubic-bezier(0.4,0,0.2,1),
-    background 0.3s cubic-bezier(0.4,0,0.2,1),
-    box-shadow 0.3s cubic-bezier(0.4,0,0.2,1),
-    backdrop-filter 0.3s cubic-bezier(0.4,0,0.2,1);
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    font-size 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 8px;
   z-index: 1;
   overflow: hidden;
+}
+
+/* Menu saat di-scroll */
+.navbar.scrolled .desktopnav li a {
+  color: #fff;
 }
 
 .desktopnav li a::before {
@@ -105,9 +103,9 @@ header {
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 24px 0 rgba(255,255,255,0.08);
+  box-shadow: 0 4px 24px 0 rgba(255, 255, 255, 0.08);
   opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1), backdrop-filter 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
   border-radius: 8px;
   backdrop-filter: blur(0px);
@@ -122,10 +120,10 @@ header {
   left: -40%;
   width: 120%;
   height: 220%;
-  background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.15) 100%);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.15) 100%);
   opacity: 0;
   transform: skewX(-20deg) translateX(-100%);
-  transition: opacity 0.3s, transform 0.6s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.3s, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   border-radius: 12px;
   z-index: 2;
@@ -135,8 +133,15 @@ header {
 .desktopnav li a:focus {
   color: #047200;
   font-weight: 600;
-  background: rgba(255,255,255,0.10);
-  box-shadow: 0 4px 24px 0 rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 4px 24px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Hover effect saat di-scroll */
+.navbar.scrolled .desktopnav li a:hover,
+.navbar.scrolled .desktopnav li a:focus {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.20);
 }
 
 .desktopnav li a:hover::before,
@@ -151,150 +156,152 @@ header {
   transform: skewX(-20deg) translateX(100%);
 }
 
-
-
 /* ================== HAMBURGER ICON ================== */
-
 #nav-icon3 {
-    width: 35px;
-    height: 30px;
-    position: relative;
-    cursor: pointer;
-    z-index: 1002;
+  width: 35px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1002;
+  transition: all 0.3s ease;
+}
+
+/* Warna icon saat di-scroll */
+.navbar.scrolled #nav-icon3 span {
+  background: #fff;
 }
 
 /* Setiap garis hamburger */
 #nav-icon3 span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: #ffffff;
-    border-radius: 9px;
-    left: 0;
-    transition: 0.25s ease-in-out;
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  left: 0;
+  transition: 0.25s ease-in-out;
 }
 
-#nav-icon3 span:nth-child(1) { top: 0px; }
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
 #nav-icon3 span:nth-child(2),
-#nav-icon3 span:nth-child(3) { top: 13px; }
-#nav-icon3 span:nth-child(4) { top: 26px; }
+#nav-icon3 span:nth-child(3) {
+  top: 13px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 26px;
+}
 
 /* Efek transisi saat hamburger diklik */
 #nav-icon3.open span:nth-child(1),
 #nav-icon3.open span:nth-child(4) {
-    top: 13px;
-    width: 0%;
-    left: 50%;
+  top: 13px;
+  width: 0%;
+  left: 50%;
 }
+
 #nav-icon3.open span:nth-child(2) {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
+
 #nav-icon3.open span:nth-child(3) {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 /* ================== MOBILE POPUP MENU ================== */
-
 .popup-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #1b1b1b3e;
-    border-top: 1px solid #ddd;
-    z-index: 1001;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.667);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid #ddd;
+  z-index: 1001;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.popup-menu.show {
+  display: block;
+  max-height: 500px;
+}
+
+/* Style untuk mobile menu saat di-scroll */
+.navbar.scrolled .popup-menu {
+  background: rgba(0, 0, 0, 0.667);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 /* Setiap link di popup mobile */
 .popup-menu a {
-    display: block;
-    width: 100%;
-    padding: 15px 20px;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s cubic-bezier(0.4,0,0.2,1), font-size 0.3s cubic-bezier(0.4,0,0.2,1), transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    font-size 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Efek hover latar belakang hijau bergerak dari kanan */
+/* Efek hover latar belakang bergerak dari kanan */
 .popup-menu a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 100%;
-    width: 100%;
-    height: 100%;
-    background-color: #d4edda;
-    transition: right 0.3s ease;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: right 0.3s ease;
+  z-index: -1;
 }
 
 .popup-menu a:hover::before {
-    right: 0;
+  right: 0;
 }
+
 .popup-menu a:hover {
-    color: #145c2e;
-    font-size: 1.08rem;
-    font-weight: 600;
-    transform: scale(1.06);
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 600;
+  transform: scale(1.06);
 }
-
-
 
 /* ================== RESPONSIVE BREAKPOINT ================== */
-
 /* Breakpoint saat lebar besar: sembunyikan hamburger & popup */
 @media (min-width: 992px) {
-    #nav-icon3 {
-        display: none;
-    }
+  #nav-icon3 {
+    display: none;
+  }
 
-    .popup-menu {
-        display: none !important;
-    }
+  .popup-menu {
+    display: none !important;
+  }
 
-    .navbar-nav {
-        display: flex !important;
-        gap: 15px;
-        margin-bottom: 0;
-    }
-}
-
-
-/* ============ SOCIAL ICONS ============ */
-.social-icons {
-  position: fixed;
-  left: 30px;
-  bottom: 30px;
-  gap: 20px;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.social-icons a:hover {
-  transform: translateY(-5px);
-  color: #d4edda;
-}
-
-/* Responsive adjustments for social icons */
-@media (max-width: 768px) {
-  .social-icons {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 30px;
+  .navbar-nav {
+    display: flex !important;
+    gap: 15px;
+    margin-bottom: 0;
   }
 }
+
 
 /* ================== HERO SECTION ================== */
 .hero-section {
@@ -305,18 +312,27 @@ header {
 
 /* Animasi floating (naik turun) */
 @keyframes floating {
-  0% { transform: translateY(0px) perspective(1000px) rotateY(-10deg); }
-  50% { transform: translateY(-15px) perspective(1000px) rotateY(-10deg); }
-  100% { transform: translateY(0px) perspective(1000px) rotateY(-10deg); }
+  0% {
+    transform: translateY(0px) perspective(1000px) rotateY(-10deg);
+  }
+
+  50% {
+    transform: translateY(-15px) perspective(1000px) rotateY(-10deg);
+  }
+
+  100% {
+    transform: translateY(0px) perspective(1000px) rotateY(-10deg);
+  }
 }
 
 .floating-animation {
   animation: floating 3s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* ================== STATS SECTION ================== */
 .stats-container {
-  background: rgba(0, 0, 0, 0.168) !important;
+  background: rgba(255, 255, 255, 0.168) !important;
   border: 1px solid rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
@@ -402,8 +418,15 @@ header {
 
 /* Animasi counting */
 @keyframes countUp {
-  from { transform: translateY(10px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .stat-number {
@@ -415,15 +438,15 @@ header {
   .stats-container {
     padding: 15px !important;
   }
-  
+
   .stat-item {
     padding: 15px 10px;
   }
-  
+
   .stat-number {
     font-size: 1.8rem;
   }
-  
+
   .stat-divider {
     width: 80%;
     height: 1px;
@@ -431,12 +454,15 @@ header {
   }
 }
 
-/* ================== MAIN ================== */
+/* ================== MAIN CONTENT ================== */
 
-/* ============ ABOUT SECTION STYLING ============ */
+.bggw {
+  background-color: rgb(235, 235, 235);
+}
+
 /* ============ VIGAZA HERO STYLES ============ */
-.vigaza-hero {
 
+.vigaza-hero {
   color: white;
   position: relative;
   overflow: hidden;
@@ -449,9 +475,9 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 50%, 
-              rgba(40, 167, 69, 0.15) 0%, 
-              transparent 40%);
+  background: radial-gradient(circle at 20% 50%,
+      rgba(40, 167, 69, 0.15) 0%,
+      transparent 40%);
   pointer-events: none;
 }
 
@@ -511,7 +537,7 @@ header {
   .hero-content h1 {
     font-size: 2.5rem;
   }
-  
+
   .hero-content .lead {
     font-size: 1.1rem;
   }
@@ -523,17 +549,17 @@ header {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-  
+
   .hero-highlights {
     text-align: left;
   }
-  
+
   .hero-cta .btn {
     display: block;
     width: 100%;
     margin-bottom: 1rem;
   }
-  
+
   .hero-cta .btn:last-child {
     margin-bottom: 0;
   }
@@ -542,136 +568,136 @@ header {
 /* ================== TELUR AYAM AREA ================== */
 /* Why Quail Eggs Section Styles */
 .why-quail-eggs {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .why-quail-eggs::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(40, 167, 69, 0.1) 0%, transparent 70%);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(40, 167, 69, 0.1) 0%, transparent 70%);
+  z-index: 0;
 }
 
 .hover-shadow {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hover-shadow:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 .icon-wrapper {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .card:hover .icon-wrapper {
-    background-color: rgba(40, 167, 69, 0.2) !important;
-    transform: rotate(10deg) scale(1.1);
+  background-color: rgba(40, 167, 69, 0.2) !important;
+  transform: rotate(10deg) scale(1.1);
 }
 
 /* ================== Ayam vs Puyuh ================== */
 .telur_ayam_area {
-    padding: 120px 0;
-    position: relative;
+  padding: 120px 0;
+  position: relative;
 }
 
 .bg-gradient {
-    background: radial-gradient(circle at top left, #ffc10730, transparent 70%);
+  background: radial-gradient(circle at top left, #ffc10730, transparent 70%);
 }
 
 .comparison-wrapper {
-    border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 .comparison-box {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    padding: 2rem;
-    z-index: 1;
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  z-index: 1;
 }
 
 .border-end-lg {
-    border-right: 2px solid;
+  border-right: 2px solid;
 }
 
 .border-start-lg {
-    border-left: 2px solid;
+  border-left: 2px solid;
 }
 
 .egg-image-wrapper {
-    z-index: 2;
+  z-index: 2;
 }
 
 .egg-image-center {
-    height: 150px;
-    width: auto;
+  height: 150px;
+  width: auto;
 }
 
 .nutrisi-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 1rem;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-    transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease;
 }
 
 .nutrisi-item:hover {
-    background-color: rgba(255, 193, 7, 0.1);
+  background-color: rgba(255, 193, 7, 0.1);
 }
 
 .nutrisi-item i {
-    font-size: 1.5rem;
-    color: #ffc107;
+  font-size: 1.5rem;
+  color: #ffc107;
 }
 
 .nutrisi-item p {
-    margin-bottom: 0.25rem;
-    font-size: 0.95rem;
-    opacity: 0.8;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
 }
 
 .nutrisi-item h4 {
-    margin: 0;
-    font-weight: 700;
-    color: #ffc107;
+  margin: 0;
+  font-weight: 700;
+  color: #ffc107;
 }
 
 @media (max-width: 992px) {
-    .telur_ayam_area {
-        padding: 80px 0;
-    }
+  .telur_ayam_area {
+    padding: 80px 0;
+  }
 
-    .comparison-wrapper {
-        flex-direction: column;
-    }
+  .comparison-wrapper {
+    flex-direction: column;
+  }
 
-    .egg-image-wrapper {
-        position: static !important;
-        transform: none !important;
-        margin: 2rem auto;
-        display: block !important;
-    }
+  .egg-image-wrapper {
+    position: static !important;
+    transform: none !important;
+    margin: 2rem auto;
+    display: block !important;
+  }
 
-    .egg-image-center {
-        height: 120px;
-    }
+  .egg-image-center {
+    height: 120px;
+  }
 }
 
 /* ================== Founder ================== */
@@ -702,9 +728,17 @@ header {
 }
 
 @keyframes floating {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(0, -15px); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, -15px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 /* Founder Section Specific */
@@ -729,18 +763,356 @@ header {
   .founder-content {
     padding: 2rem !important;
   }
-  
+
   h2.display-4 {
     font-size: 2.2rem;
   }
-  
+
   .founder-info {
     flex-direction: column;
     text-align: center;
   }
-  
-  .founder-info > div:not(:first-child) {
+
+  .founder-info>div:not(:first-child) {
     margin-top: 1rem;
   }
 }
 
+/* ================== FAQ SECTION ================== */
+.accordion-button:not(.collapsed) {
+  background-color: #e9fbee;
+  color: #198754;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.accordion-item {
+  transition: all 0.3s ease;
+}
+
+
+/* ================== CUSTOMER REVIEWS MARQUEE ================== */
+.review-marquee-wrapper {
+  padding: 1rem 0;
+}
+
+.review-marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: scroll-left 30s linear infinite;
+  padding: 0.5rem 0;
+}
+
+.review-card {
+  min-width: 320px;
+  max-width: 320px;
+  height: 180px;
+  /* Fixed height */
+  flex: 0 0 auto;
+  border-radius: 12px;
+  border: none;
+  background: white;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.review-card p {
+  flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.4;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.review-marquee.paused .marquee-track {
+  animation-play-state: paused;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(248, 249, 250, 1) 0%, rgba(248, 249, 250, 0) 100%);
+  z-index: 2;
+}
+
+.gradient-overlay.end-0 {
+  right: 0;
+  background: linear-gradient(270deg, rgba(248, 249, 250, 1) 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ============ OUR TEAM ============ */
+.team-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.text-gray {
+  color: #6c757d !important;
+  /* Bootstrap's gray color */
+}
+
+.social-icons a {
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+/* Hover effects */
+.social-icons a:hover .bi-facebook {
+  color: #1877f2 !important;
+  /* Facebook blue */
+  transform: scale(1.2);
+}
+
+.social-icons a:hover .bi-instagram {
+  color: #e1306c !important;
+  /* Instagram pink */
+  transform: scale(1.2);
+}
+
+.social-icons a:hover .bi-youtube {
+  color: #ff0000 !important;
+  /* YouTube red */
+  transform: scale(1.2);
+}
+
+.social-icons a:hover .bi-linkedin {
+  color: #0077b5 !important;
+  /* LinkedIn blue */
+  transform: scale(1.2);
+}
+
+.social-icons a:hover .bi-twitter-x {
+  color: #000000 !important;
+  /* Twitter/X blue */
+  transform: scale(1.2);
+}
+
+/* Smooth icon scaling */
+.social-icons a i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* ================== CONTACT & MAP STYLES ================== */
+
+.contact-map-section {
+  background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 100%);
+}
+
+.icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-info li:hover .icon-wrapper {
+  background-color: var(--bs-success);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.social-icon,
+.ecom-icon {
+  width: 44px;
+  height: 44px;
+  background: #f1f3f5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover,
+.ecom-icon:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Colors for Social Icons */
+.facebook:hover {
+  background: #1877f2;
+  color: #fff !important;
+}
+
+.instagram:hover {
+  background: #e1306c;
+  color: #fff !important;
+}
+
+.tiktok:hover {
+  background: #000;
+  color: #fff !important;
+}
+
+.youtube:hover {
+  background: #ff0000;
+  color: #fff !important;
+}
+
+.linktree:hover {
+  background: #39e09b;
+  color: #fff !important;
+}
+
+/* Marketplace Icons */
+.shopee:hover {
+  background: #ffffff;
+}
+
+.tokopedia:hover {
+  background: #42b549;
+}
+
+.lazada:hover {
+  background: #0f146d;
+}
+
+.ecom-icon img {
+  filter: grayscale(100%) contrast(0.6);
+  transition: all 0.3s;
+}
+
+.ecom-icon:hover img {
+  filter: none;
+  transform: scale(1.1);
+}
+
+/* Larger Map Container */
+.map-container {
+  position: relative;
+  height: 450px;
+  /* Increased height */
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 20%);
+}
+
+
+  /* ================== FOOTER STYLES ================== */
+  .footer {
+    background: linear-gradient(135deg, #000000, #013a13);
+    font-size: 0.9rem;
+  }
+
+  .footer h6 {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-links li a,
+  .footer-contact a {
+    transition: all 0.3s ease;
+  }
+
+  .footer-links li a:hover,
+  .footer-contact a:hover,
+  .hover-success:hover {
+    color: var(--bs-success) !important;
+    padding-left: 6px;
+  }
+
+  .social-icons .social-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  /* Facebook hover effect */
+  .social-circle:hover .bi-facebook {
+    color: #1877f2 !important;
+    transform: scale(1.2);
+  }
+
+  /* Instagram hover effect */
+  .social-circle:hover .bi-instagram {
+    color: #e1306c !important;
+    transform: scale(1.2);
+  }
+
+  /* YouTube hover effect */
+  .social-circle:hover .bi-youtube {
+    color: #ff0000 !important;
+    transform: scale(1.2);
+  }
+
+  /* TikTok hover effect */
+  .social-circle:hover .bi-tiktok {
+    color: #000000 !important;
+    transform: scale(1.2);
+  }
+
+  /* General hover effects */
+  .social-circle:hover {
+    background: rgb(255, 255, 255);
+    transform: translateY(-3px);
+  }
+
+  .newsletter-form .form-control:focus {
+    border-color: var(--bs-success);
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+  }
