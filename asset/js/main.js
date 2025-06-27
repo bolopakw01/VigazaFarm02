@@ -1,167 +1,210 @@
 /**
- * Vigaza Farm Main JavaScript File
- * Includes:
- * - Navbar scroll effect
- * - Mobile menu toggle
- * - Counter animation
- * - Scroll animations
- * - Other interactive elements
+ * Vigaza Farm Main JavaScript File - Optimized Version
+ * Features:
+ * - Modular design with reusable functions
+ * - Better event delegation
+ * - Optimized performance
+ * - Cleaner code structure
  */
 
-document.addEventListener('DOMContentLoaded', function () {
-    // ==================== NAVBAR SCROLL EFFECT ====================
-    const navbar = document.querySelector('.navbar');
-
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // Initialize navbar state on page load
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    }
-
-    // Mobile detection for parallax fallback
-    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.querySelector('.parallax-background').style.backgroundAttachment = 'scroll';
-    }
-
-    // ==================== MOBILE MENU TOGGLE ====================
-    const hamburger = document.getElementById('nav-icon3');
-    const popupMenu = document.getElementById('popupMenu');
-
-    if (hamburger && popupMenu) {
-        hamburger.addEventListener('click', function () {
-            this.classList.toggle('open');
-            popupMenu.classList.toggle('show');
-        });
-
-        // Close menu when clicking on links
-        const menuLinks = popupMenu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('open');
-                popupMenu.classList.remove('show');
+document.addEventListener('DOMContentLoaded', function() {
+    // ==================== MODULAR FUNCTIONS ====================
+    const NavbarManager = {
+        init: function() {
+            this.navbar = document.querySelector('.navbar');
+            this.setupScrollEffect();
+            this.handleMobileFallback();
+            this.checkInitialScroll();
+        },
+        
+        setupScrollEffect: function() {
+            window.addEventListener('scroll', () => {
+                this.navbar.classList.toggle('scrolled', window.scrollY > 50);
             });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function (e) {
-            if (!hamburger.contains(e.target) && !popupMenu.contains(e.target)) {
-                hamburger.classList.remove('open');
-                popupMenu.classList.remove('show');
+        },
+        
+        checkInitialScroll: function() {
+            if (window.scrollY > 50) {
+                this.navbar.classList.add('scrolled');
             }
-        });
-    }
-
-    // ==================== COUNTER ANIMATION ====================
-    const animateCounter = (element, target, duration = 1500) => {
-        const start = 0;
-        const increment = target / (duration / 16);
-        let current = start;
-
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                clearInterval(timer);
-                current = target;
+        },
+        
+        handleMobileFallback: function() {
+            if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                const parallaxBg = document.querySelector('.parallax-background');
+                if (parallaxBg) {
+                    parallaxBg.style.backgroundAttachment = 'scroll';
+                }
             }
-            element.textContent = Math.floor(current) === current ? current : current.toFixed(1);
-        }, 16);
+        }
     };
 
-    const setupCounters = () => {
-        const statNumbers = document.querySelectorAll('.stat-number');
-
-        statNumbers.forEach(number => {
-            const target = parseFloat(number.getAttribute('data-count'));
-            animateCounter(number, target);
-        });
-    };
-
-    // ==================== INTERSECTION OBSERVER ====================
-    const setupIntersectionObserver = () => {
-        // For counter animation
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setupCounters();
-                    counterObserver.unobserve(entry.target);
+    const MobileMenu = {
+        init: function() {
+            this.hamburger = document.getElementById('nav-icon3');
+            this.popupMenu = document.getElementById('popupMenu');
+            
+            if (!this.hamburger || !this.popupMenu) return;
+            
+            this.setupEventListeners();
+        },
+        
+        setupEventListeners: function() {
+            this.hamburger.addEventListener('click', this.toggleMenu.bind(this));
+            
+            // Event delegation for menu links
+            this.popupMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    this.closeMenu();
                 }
             });
-        }, { threshold: 0.3 });
-
-        const statsSection = document.querySelector('.stats-container');
-        if (statsSection) {
-            counterObserver.observe(statsSection);
+            
+            document.addEventListener('click', (e) => {
+                if (!this.hamburger.contains(e.target) && !this.popupMenu.contains(e.target)) {
+                    this.closeMenu();
+                }
+            });
+        },
+        
+        toggleMenu: function() {
+            this.hamburger.classList.toggle('open');
+            this.popupMenu.classList.toggle('show');
+        },
+        
+        closeMenu: function() {
+            this.hamburger.classList.remove('open');
+            this.popupMenu.classList.remove('show');
         }
+    };
 
-        // For general scroll animations
-        const sectionObserver = new IntersectionObserver((entries) => {
+    const CounterAnimation = {
+        init: function() {
+            this.observer = new IntersectionObserver(this.handleIntersection.bind(this), 
+                { threshold: 0.3 }
+            );
+            
+            const statsSection = document.querySelector('.stats-container');
+            if (statsSection) {
+                this.observer.observe(statsSection);
+            }
+        },
+        
+        handleIntersection: function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.animateAllCounters();
+                    this.observer.unobserve(entry.target);
+                }
+            });
+        },
+        
+        animateAllCounters: function() {
+            document.querySelectorAll('.stat-number').forEach(number => {
+                const target = parseFloat(number.dataset.count);
+                this.animateCounter(number, target);
+            });
+        },
+        
+        animateCounter: function(element, target, duration = 1500) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    clearInterval(timer);
+                    current = target;
+                }
+                element.textContent = Math.floor(current) === current ? 
+                    current : current.toFixed(1);
+            }, 16);
+        }
+    };
+
+    const ScrollAnimations = {
+        init: function() {
+            this.observer = new IntersectionObserver(this.handleSections.bind(this), 
+                { threshold: 0.1 }
+            );
+            
+            document.querySelectorAll('section').forEach(section => {
+                this.observer.observe(section);
+            });
+        },
+        
+        handleSections: function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
                 }
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            sectionObserver.observe(section);
-        });
+        }
     };
 
-    // ==================== FLOATING ANIMATION ====================
-    const setupFloatingAnimations = () => {
-        const floatingElements = document.querySelectorAll('.floating-animation');
-
-        floatingElements.forEach(el => {
-            el.style.willChange = 'transform';
-        });
-    };
-
-    // ==================== INITIALIZE ALL FUNCTIONS ====================
-    setupIntersectionObserver();
-    setupFloatingAnimations();
-
-    // ==================== SOCIAL ICONS HOVER EFFECT ====================
-    const socialIcons = document.querySelectorAll('.social-icons a');
-
-    socialIcons.forEach(icon => {
-        icon.addEventListener('mouseenter', () => {
-            icon.style.transform = 'translateY(-5px)';
-        });
-
-        icon.addEventListener('mouseleave', () => {
-            icon.style.transform = 'translateY(0)';
-        });
-    });
-
-    // ==================== HOVER EFFECTS FOR CARDS ====================
-    const setupCardHoverEffects = () => {
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-5px)';
-                card.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+    const HoverEffects = {
+        init: function() {
+            this.setupSocialIcons();
+            this.setupCardHovers();
+            this.setupFloatingElements();
+        },
+        
+        setupSocialIcons: function() {
+            // Event delegation for social icons
+            document.querySelector('.social-icons')?.addEventListener('mouseover', (e) => {
+                const icon = e.target.closest('a');
+                if (icon) {
+                    icon.style.transform = 'translateY(-5px)';
+                }
             });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-                card.style.boxShadow = '';
+            
+            document.querySelector('.social-icons')?.addEventListener('mouseout', (e) => {
+                const icon = e.target.closest('a');
+                if (icon) {
+                    icon.style.transform = 'translateY(0)';
+                }
             });
-        });
+        },
+        
+        setupCardHovers: function() {
+            // Event delegation for cards
+            document.addEventListener('mouseover', (e) => {
+                const card = e.target.closest('.card');
+                if (card) {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+                }
+            });
+            
+            document.addEventListener('mouseout', (e) => {
+                const card = e.target.closest('.card');
+                if (card) {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '';
+                }
+            });
+        },
+        
+        setupFloatingElements: function() {
+            document.querySelectorAll('.floating-animation').forEach(el => {
+                el.style.willChange = 'transform';
+            });
+        }
     };
 
-    setupCardHoverEffects();
+    // ==================== INITIALIZE ALL MODULES ====================
+    NavbarManager.init();
+    MobileMenu.init();
+    CounterAnimation.init();
+    ScrollAnimations.init();
+    HoverEffects.init();
 });
 
-// ==================== WINDOW LOAD EVENT ====================
-window.addEventListener('load', function () {
-    // Additional load-time optimizations can go here
-    console.log('Page fully loaded');
+// Clean window load event
+window.addEventListener('load', function() {
+    // Performance tracking or additional optimizations
+    if (window.performance) {
+        console.log('Page fully loaded in', 
+            performance.now().toFixed(2), 'ms');
+    }
 });
