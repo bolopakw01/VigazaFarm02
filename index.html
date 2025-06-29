@@ -53,24 +53,44 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="service.html"><i class="bi bi-tools me-1"></i>Service</a>
+          <!-- kode dropdown : -->
+          <li class="nav-item dropdown position-relative">
+            <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button" aria-expanded="false">
+              <i class="bi bi-tools me-1"></i>Service
+            </a>
+            <ul class="dropdown-menu position-absolute start-0 mt-2 shadow glass-effect"
+              aria-labelledby="serviceDropdown">
+              <li>
+                <a class="dropdown-item teks-success" href="produk.html">
+                  <i class="bi bi-box-seam me-2"></i>Produk
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item teks-success" href="kemitraan.html">
+                  <i class="bi bi-people-fill me-2"></i>Kemitraan
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="portofolio.html"><i class="bi bi-images me-1"></i>Portfolio</a>
           </li>
+          <!-- menu Login -->
           <li class="nav-item">
-            <a class="nav-link" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
+            <a class="nav-link login-btn" href="login.html">
+              <i class="bi bi-box-arrow-in-right me-1"></i>Login
+            </a>
           </li>
         </ul>
 
         <!-- MENU NAVIGASI MOBILE (popup) -->
         <div class="popup-menu" id="popupMenu">
-          <a href="index.html"><i class="bi bi-house-door me-1"></i>Home</a>
-          <a href="about.html"><i class="bi bi-info-circle me-1"></i>About</a>
-          <a href="service.html"><i class="bi bi-tools me-1"></i>Service</a>
-          <a href="portofolio.html"><i class="bi bi-images me-1"></i>Portfolio</a>
-          <a href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a>
+          <a href="index.html"><i class="bi bi-house-door me-2"></i>Home</a>
+          <a href="about.html"><i class="bi bi-info-circle me-2"></i>About</a>
+          <a href="produk.html"><i class="bi bi-box-seam me-2"></i>Produk</a>
+          <a href="kemitraan.html"><i class="bi bi-people-fill me-2"></i>Kemitraan</a>
+          <a href="portofolio.html"><i class="bi bi-images me-2"></i>Portfolio</a>
+          <a href="contact.html"><i class="bi bi-box-arrow-in-right me-1"></i>Login</a>
         </div>
       </div>
     </nav>
@@ -841,7 +861,7 @@
                 <ul class="list-unstyled mb-0">
                   <li class="mb-3">
                     <div class="d-flex align-items-start">
-                      <div class="icon-wrapper bg-success bg-opacity-10 text-success me-3">
+                      <div class="icon-wrapper bg-light bg-opacity-10 text-success me-3">
                         <i class="bi bi-geo-alt-fill fs-5"></i>
                       </div>
                       <div>
@@ -857,7 +877,7 @@
                   </li>
                   <li class="mb-3">
                     <div class="d-flex align-items-start">
-                      <div class="icon-wrapper bg-success bg-opacity-10 text-success me-3">
+                      <div class="icon-wrapper bg-light bg-opacity-10 text-success me-3">
                         <i class="bi bi-envelope-fill fs-5"></i>
                       </div>
                       <div>
@@ -868,7 +888,7 @@
                   </li>
                   <li>
                     <div class="d-flex align-items-start">
-                      <div class="icon-wrapper bg-success bg-opacity-10 text-success me-3">
+                      <div class="icon-wrapper bg-light bg-opacity-10 text-success me-3">
                         <i class="bi bi-whatsapp fs-5"></i>
                       </div>
                       <div>
