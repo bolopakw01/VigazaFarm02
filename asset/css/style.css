@@ -10,7 +10,7 @@
 
 /* CSS Variables for consistent theming */
 :root {
-  --primary-color: #28a745;
+  --primary-color: #011c09;
   --primary-dark: #218d45;
   --primary-light: #e9fbee;
   --secondary-color: #ffc107;
@@ -476,7 +476,7 @@ body {
   position: absolute;
   bottom: -15px;
   right: 20px;
-  background: linear-gradient(135deg, var(--primary-color), #1e7e34);
+  background-color: #198754;
   color: white;
   padding: 8px 15px;
   border-radius: 50px;
@@ -722,6 +722,29 @@ body {
   transform: rotate(15deg);
 }
 
+/* Social media founder - remove underline and add hover effects */
+.founder-info .social-links a {
+  text-decoration: none !important;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.founder-info .social-links a:hover {
+  transform: scale(1.2);
+}
+
+.founder-info .social-links a:hover .bi-instagram {
+  color: #e1306c !important;
+}
+
+.founder-info .social-links a:hover .bi-linkedin {
+  color: #0077b5 !important;
+}
+
+.founder-info .social-links a:hover .bi-twitter-x {
+  color: #000000 !important;
+}
+
 .floating-animation-delay {
   animation: floating 6s ease-in-out 1s infinite;
 }
@@ -788,7 +811,6 @@ body {
   flex-grow: 1;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   line-height: 1.4;
 }
@@ -837,40 +859,60 @@ body {
   color: var(--text-muted) !important;
 }
 
-.social-icons a {
-  transition: all var(--transition-base);
-  font-size: 1.2rem;
-  display: inline-block;
+/* Team social icons styles */
+.team-card .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
-/* Social icons hover effects */
-.social-icons a:hover .bi-facebook {
+.team-card .social-icons a {
+  text-decoration: none !important;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-muted);
+}
+
+.team-card .social-icons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Platform-specific hover colors */
+.team-card .social-icons a:hover .bi-facebook {
   color: #1877f2 !important;
-  transform: scale(1.2);
 }
 
-.social-icons a:hover .bi-instagram {
+.team-card .social-icons a:hover .bi-instagram {
   color: #e1306c !important;
-  transform: scale(1.2);
 }
 
-.social-icons a:hover .bi-youtube {
+.team-card .social-icons a:hover .bi-youtube {
   color: #ff0000 !important;
-  transform: scale(1.2);
 }
 
-.social-icons a:hover .bi-linkedin {
+.team-card .social-icons a:hover .bi-linkedin {
   color: #0077b5 !important;
-  transform: scale(1.2);
 }
 
-.social-icons a:hover .bi-twitter-x {
+.team-card .social-icons a:hover .bi-twitter-x {
   color: #000000 !important;
-  transform: scale(1.2);
 }
 
-.social-icons a i {
-  transition: transform var(--transition-base), color var(--transition-base);
+/* Icon animation */
+.team-card .social-icons a i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.team-card .social-icons a:hover i {
+  transform: scale(1.2);
 }
 
 /* ==================== CONTACT & MAP ==================== */
