@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VigazaFarm</title>
+    <link rel="icon" href="../asset/img/icon.png" type="image/png" />
+
+    <!-- Link ke file CSS utama -->
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <link rel="stylesheet" href="../asset/css/portofolio.css" />
+
+    <!-- Bootstrap CSS & Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ==================== BTT ==================== -->
+    <!-- Back to Top Button - Improved Version -->
+    <button id="backToTopBtn" class="back-to-top btn btn-success shadow" aria-label="Back to top">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+
+    <!-- ============ HEADER / NAVBAR ============ -->
+
+    <header class="fixed-top">
+        <nav class="navbar">
+            <div class="container-fluid d-flex justify-content-between align-items-center p-2 px-4">
+                <!-- LOGO -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img class="vflogo" src="../asset/img/logo1.png" alt="Vigaza Farm Logo" />
+                </a>
+
+                <!-- HAMBURGER (mobile only) -->
+                <div id="nav-icon3" class="d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- MENU NAVIGASI DESKTOP -->
+                <ul class="desktopnav navbar-nav d-none d-lg-flex flex-row align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a>
+                    </li>
+                    <!-- kode dropdown : -->
+                    <li class="nav-item dropdown position-relative">
+                        <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button"
+                            aria-expanded="false">
+                            <i class="bi bi-tools me-1"></i>Service
+                        </a>
+                        <ul class="dropdown-menu position-absolute start-0 mt-2 shadow glass-effect"
+                            aria-labelledby="serviceDropdown">
+                            <li>
+                                <a class="dropdown-item teks-success" href="/pages/produk.html">
+                                    <i class="bi bi-box-seam me-2"></i>Produk
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item teks-success" href="kemitraan.html">
+                                    <i class="bi bi-people-fill me-2"></i>Kemitraan
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofolio.html"><i class="bi bi-images me-1"></i>Portfolio</a>
+                    </li>
+                    <!-- menu Login -->
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="/pages/flippage.html">
+                            <i class="bi bi-box-arrow-in-right me-1"></i>Login
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- MENU NAVIGASI MOBILE (popup) -->
+                <div class="popup-menu" id="popupMenu">
+                    <a href="index.html"><i class="bi bi-house-door me-2"></i>Home</a>
+                    <a href="about.html"><i class="bi bi-info-circle me-2"></i>About</a>
+                    <a href="produk.html"><i class="bi bi-box-seam me-2"></i>Produk</a>
+                    <a href="kemitraan.html"><i class="bi bi-people-fill me-2"></i>Kemitraan</a>
+                    <a href="portofolio.html"><i class="bi bi-images me-2"></i>Portfolio</a>
+                    <a href="contact.html"><i class="bi bi-box-arrow-in-right me-1"></i>Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- ============ MAIN CONTENT ============ -->
+    <main class="portfolio-page bg-light with-bg-image">
+        <!-- Hero Section -->
+        <section class="portfolio-hero with-bg-image2 py-5">
+            <div class="container portfolio-hero-content">
+                <div class="row align-items-center min-vh-60 py-5">
+                    <div class="col-lg-8 mx-auto text-center py-5">
+                        <span class="badge bg-success bg-opacity-20 text-white mb-3 px-3 py-2 rounded-pill">Portofolio</span>
+                        <h1 class="display-4 text-white fw-bold mb-4" data-aos="fade-up">Prestasi & Pengakuan</h1>
+                        <p class="lead text-light mb-4" data-aos="fade-up" data-aos-delay="100">
+                            Koleksi sertifikat, penghargaan, dan pencapaian yang membuktikan komitmen kami terhadap
+                            kualitas dan keunggulan.
+                        </p>
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <a href="#portfolio-content" class="btn btn-success px-4 py-2 rounded-pill">
+                                <i class="bi bi-arrow-down-circle me-2"></i>Jelajahi Portofolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Content -->
+        <section id="portfolio-content" class="portfolio-content py-5 bg-white">
+            <div class="container">
+                <!-- Filter -->
+                <div class="portfolio-filter mb-5">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <button type="button" class="btn btn-filter active rounded-pill" data-filter="all">Semua Kategori</button>
+                        <button type="button" class="btn btn-filter rounded-pill" data-filter="sertifikat">
+                            <i class="bi bi-file-earmark-check me-2"></i>Sertifikat
+                        </button>
+                        <button type="button" class="btn btn-filter rounded-pill" data-filter="penghargaan">
+                            <i class="bi bi-trophy me-2"></i>Penghargaan
+                        </button>
+                        <button type="button" class="btn btn-filter rounded-pill" data-filter="pencapaian">
+                            <i class="bi bi-graph-up-arrow me-2"></i>Pencapaian
+                        </button>
+                        <button type="button" class="btn btn-filter rounded-pill" data-filter="artikel">
+                            <i class="bi bi-newspaper me-2"></i>Artikel
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div class="portfolio-grid">
+                    <div class="row g-4">
+                        <!-- Sertifikat Item -->
+                        <div class="col-md-6 col-lg-4 portfolio-item" data-category="sertifikat">
+                            <div class="card portfolio-card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="portfolio-img-container ratio ratio-16x9">
+                                    <img src="https://placehold.co/600x400/28a745/FFF?text=Sertifikat+Halal"
+                                        class="img-fluid" alt="Sertifikat Halal">
+                                    <div class="portfolio-overlay d-flex flex-column justify-content-end p-4">
+                                        <div>
+                                            <a href="https://placehold.co/600x400/28a745/FFF?text=Sertifikat+Halal"
+                                                data-fslightbox="sertifikat" class="portfolio-zoom btn btn-light btn-sm rounded-circle me-2">
+                                                <i class="bi bi-zoom-in"></i>
+                                            </a>
+                                            <a href="#" class="portfolio-link btn btn-light btn-sm rounded-circle">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                        <h5 class="text-white mt-2 mb-0">Sertifikat Halal MUI</h5>
+                                    </div>
+                                    <span class="portfolio-badge bg-success">Sertifikat</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="text-muted small"><i class="bi bi-calendar me-1"></i>15 Jan 2023</span>
+                                        <span class="text-muted small"><i class="bi bi-download me-1"></i>PDF</span>
+                                    </div>
+                                    <p class="card-text text-muted">Pengakuan resmi bahwa seluruh produk Vigaza Farm memenuhi standar halal</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0 pt-0">
+                                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Penghargaan Item -->
+                        <div class="col-md-6 col-lg-4 portfolio-item" data-category="penghargaan">
+                            <div class="card portfolio-card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="portfolio-img-container ratio ratio-16x9">
+                                    <img src="https://placehold.co/600x400/ffc107/000?text=Penghargaan+Kualitas"
+                                        class="img-fluid" alt="Penghargaan Kualitas">
+                                    <div class="portfolio-overlay d-flex flex-column justify-content-end p-4">
+                                        <div>
+                                            <a href="https://placehold.co/600x400/ffc107/000?text=Penghargaan+Kualitas"
+                                                data-fslightbox="penghargaan" class="portfolio-zoom btn btn-light btn-sm rounded-circle me-2">
+                                                <i class="bi bi-zoom-in"></i>
+                                            </a>
+                                            <a href="#" class="portfolio-link btn btn-light btn-sm rounded-circle">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                        <h5 class="text-white mt-2 mb-0">Penghargaan Produk Berkualitas</h5>
+                                    </div>
+                                    <span class="portfolio-badge bg-warning">Penghargaan</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="text-muted small"><i class="bi bi-calendar me-1"></i>5 Mar 2023</span>
+                                        <span class="text-muted small"><i class="bi bi-award me-1"></i>Top Quality</span>
+                                    </div>
+                                    <p class="card-text text-muted">Penghargaan dari Asosiasi Peternak Indonesia untuk kualitas telur puyuh terbaik</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0 pt-0">
+                                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pencapaian Item -->
+                        <div class="col-md-6 col-lg-4 portfolio-item" data-category="pencapaian">
+                            <div class="card portfolio-card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="portfolio-img-container ratio ratio-16x9">
+                                    <img src="https://placehold.co/600x400/0dcaf0/000?text=Ekspor+Singapura"
+                                        class="img-fluid" alt="Pencapaian Ekspor">
+                                    <div class="portfolio-overlay d-flex flex-column justify-content-end p-4">
+                                        <div>
+                                            <a href="https://placehold.co/600x400/0dcaf0/000?text=Ekspor+Singapura"
+                                                data-fslightbox="pencapaian" class="portfolio-zoom btn btn-light btn-sm rounded-circle me-2">
+                                                <i class="bi bi-zoom-in"></i>
+                                            </a>
+                                            <a href="#" class="portfolio-link btn btn-light btn-sm rounded-circle">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                        <h5 class="text-white mt-2 mb-0">Ekspor Pertama ke Singapura</h5>
+                                    </div>
+                                    <span class="portfolio-badge bg-info">Pencapaian</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="text-muted small"><i class="bi bi-calendar me-1"></i>10 Mei 2023</span>
+                                        <span class="text-muted small"><i class="bi bi-globe me-1"></i>Internasional</span>
+                                    </div>
+                                    <p class="card-text text-muted">Pencapaian ekspor pertama produk Vigaza Farm ke pasar internasional</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0 pt-0">
+                                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Artikel Item -->
+                        <div class="col-md-6 col-lg-4 portfolio-item" data-category="artikel" data-aos="fade-up">
+                            <div class="card portfolio-card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="portfolio-img-container ratio ratio-16x9">
+                                    <img src="https://placehold.co/600x400/6c757d/FFF?text=Artikel+Inovasi"
+                                        class="img-fluid" alt="Artikel Inovasi">
+                                    <div class="portfolio-overlay d-flex flex-column justify-content-end p-4">
+                                        <div>
+                                            <a href="https://placehold.co/600x400/6c757d/FFF?text=Artikel+Inovasi"
+                                                data-fslightbox="artikel" class="portfolio-zoom btn btn-light btn-sm rounded-circle me-2">
+                                                <i class="bi bi-zoom-in"></i>
+                                            </a>
+                                            <a href="#" class="portfolio-link btn btn-light btn-sm rounded-circle">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                        <h5 class="text-white mt-2 mb-0">Inovasi Peternakan Modern</h5>
+                                    </div>
+                                    <span class="portfolio-badge bg-secondary">Artikel</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="text-muted small"><i class="bi bi-calendar me-1"></i>22 Jul 2023</span>
+                                        <span class="text-muted small"><i class="bi bi-newspaper me-1"></i>Media Nasional</span>
+                                    </div>
+                                    <p class="card-text text-muted">Artikel tentang penerapan teknologi modern di peternakan Vigaza Farm</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0 pt-0">
+                                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill">Baca Artikel</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tambahkan 2 item lagi untuk melengkapi 6 item -->
+                        <div class="col-md-6 col-lg-4 portfolio-item" data-category="sertifikat" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div class="card portfolio-card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="portfolio-img-container ratio ratio-16x9">
+                                    <img src="https://placehold.co/600x400/28a745/FFF?text=Sertifikat+HACCP"
+                                        class="img-fluid" alt="Sertifikat HACCP">
+                                    <div class="portfolio-overlay d-flex flex-column justify-content-end p-4">
+                                        <div>
+                                            <a href="https://placehold.co/600x400/28a745/FFF?text=Sertifikat+HACCP"
+                                                data-fslightbox="sertifikat" class="portfolio-zoom btn btn-light btn-sm rounded-circle me-2">
+                                                <i class="bi bi-zoom-in"></i>
+                                            </a>
+                                            <a href="#" class="portfolio-link btn btn-light btn-sm rounded-circle">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                        <h5 class="text-white mt-2 mb-0">Sertifikat HACCP</h5>
+                                    </div>
+                                    <span class="portfolio-badge bg-success">Sertifikat</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="text-muted small"><i class="bi bi-calendar me-1"></i>30 Mar 2023</span>
+                                        <span class="text-muted small"><i class="bi bi-download me-1"></i>PDF</span>
+                                    </div>
+                                    <p class="card-text text-muted">Sertifikasi sistem keamanan pangan internasional untuk produk kami</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0 pt-0">
+                                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 portfolio-item" data-category="penghargaan" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div class="card portfolio-card h-100 border-0 shadow-sm overflow-hidden">
+                                <div class="portfolio-img-container ratio ratio-16x9">
+                                    <img src="https://placehold.co/600x400/ffc107/000?text=Penghargaan+Inovasi"
+                                        class="img-fluid" alt="Penghargaan Inovasi">
+                                    <div class="portfolio-overlay d-flex flex-column justify-content-end p-4">
+                                        <div>
+                                            <a href="https://placehold.co/600x400/ffc107/000?text=Penghargaan+Inovasi"
+                                                data-fslightbox="penghargaan" class="portfolio-zoom btn btn-light btn-sm rounded-circle me-2">
+                                                <i class="bi bi-zoom-in"></i>
+                                            </a>
+                                            <a href="#" class="portfolio-link btn btn-light btn-sm rounded-circle">
+                                                <i class="bi bi-link-45deg"></i>
+                                            </a>
+                                        </div>
+                                        <h5 class="text-white mt-2 mb-0">Penghargaan Inovasi Produk</h5>
+                                    </div>
+                                    <span class="portfolio-badge bg-warning">Penghargaan</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <span class="text-muted small"><i class="bi bi-calendar me-1"></i>12 Sep 2023</span>
+                                        <span class="text-muted small"><i class="bi bi-award me-1"></i>Inovasi</span>
+                                    </div>
+                                    <p class="card-text text-muted">Penghargaan untuk inovasi produk olahan telur puyuh terbaik</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0 pt-0">
+                                    <a href="#" class="btn btn-sm btn-outline-success rounded-pill">Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Stats -->
+            <div class="portfolio-stats mt-5 py-5" data-aos="fade-up">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bold mb-3">Prestasi Kami dalam Angka</h2>
+                        <p class="text-muted lead">Berikut adalah pencapaian yang telah kami raih sejauh ini</p>
+                    </div>
+                    
+                    <div class="row g-4 text-center px-3 px-md-5">
+                        <div class="col-6 col-md-3">
+                            <div class="stat-item p-3">
+                                <div class="stat-number display-5 fw-bold" id="sertifikat-count">0</div>
+                                <div class="stat-label">Sertifikat</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-item p-3">
+                                <div class="stat-number display-5 fw-bold" id="penghargaan-count">0</div>
+                                <div class="stat-label">Penghargaan</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-item p-3">
+                                <div class="stat-number display-5 fw-bold" id="pencapaian-count">0</div>
+                                <div class="stat-label">Pencapaian</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-item p-3">
+                                <div class="stat-number display-5 fw-bold" id="artikel-count">0</div>
+                                <div class="stat-label">Artikel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="portfolio-cta py-5 bg-white">
+            <div class="container">
+                <div class="row justify-content-center" data-aos="zoom-in">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="fw-bold mb-4">Tertarik untuk Bekerja Sama?</h2>
+                        <p class="lead text-muted mb-4">Vigaza Farm terbuka untuk kemitraan dan kolaborasi yang saling menguntungkan</p>
+                        <a href="../pages/kemitraan.html" class="btn btn-success px-4 py-2 me-2 rounded-pill">
+                            <i class="bi bi-people-fill me-2"></i>Info Kemitraan
+                        </a>
+                        <a href="../pages/contact.html" class="btn btn-outline-success px-4 py-2 rounded-pill">
+                            <i class="bi bi-envelope me-2"></i>Hubungi Kami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER SECTION ================= -->
+    <footer class="footer text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Brand & Deskripsi -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="footer-brand">
+                        <img src="../asset/img/icon.png" alt="Vigaza Logo" class="img-fluid mb-3"
+                            style="max-height: 60px" />
+                        <h4 class="fw-bold text-success">Vigaza Farm</h4>
+                        <p class="small text-white-50 mt-3 pe-3">
+                            Penyedia produk puyuh berkualitas: telur segar, daging, dan
+                            layanan edukatif. Komitmen kami adalah mutu dan pelayanan
+                            terbaik.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Navigasi -->
+                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <h6 class="fw-semibold text-uppercase text-success mb-3">
+                        Navigasi
+                    </h6>
+                    <ul class="list-unstyled small footer-links">
+                        <li class="mb-2">
+                            <a href="../index.html" class="text-white-50 text-decoration-none hover-success">Beranda</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../pages/about.html"
+                                class="text-white-50 text-decoration-none hover-success">Tentang Kami</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../pages/portofolio.html"
+                                class="text-white-50 text-decoration-none hover-success">Portofolio</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../pages/kemitraan.html"
+                                class="text-white-50 text-decoration-none hover-success">Kemitraan</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../pages/contact.html"
+                                class="text-white-50 text-decoration-none hover-success">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <h6 class="fw-semibold text-uppercase text-success mb-3">Kontak</h6>
+                    <ul class="list-unstyled small text-white-50 footer-contact">
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-geo-alt-fill text-success me-2 mt-1"></i>
+                            <span>Jl. Gading Raya, Palgading, Sinduharjo, Sleman 55581</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-envelope-fill text-success me-2 mt-1"></i>
+                            <a href="mailto:vigazafarm@gmail.com"
+                                class="text-white-50 text-decoration-none hover-success">vigazafarm@gmail.com</a>
+                        </li>
+                        <li class="d-flex">
+                            <i class="bi bi-whatsapp text-success me-2 mt-1"></i>
+                            <a href="https://wa.me/6281234567890"
+                                class="text-white-50 text-decoration-none hover-success">+62
+                                812-3456-7890</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sosial Media & Newsletter -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <h6 class="fw-semibold text-uppercase text-success mb-3">
+                        Ikuti Kami
+                    </h6>
+                    <div class="social-icons d-flex flex-wrap gap-3 mb-4">
+                        <a href="https://www.facebook.com/vigazafarm" class="social-circle" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/vigazafarm/" class="social-circle" title="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@vigazafarm" class="social-circle" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@vigazafarm" class="social-circle" title="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+
+                    <h6 class="fw-semibold text-uppercase text-success mb-3">
+                        Newsletter
+                    </h6>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-2">
+                            <input type="email" class="form-control bg-black border-success text-white"
+                                placeholder="Email Anda" />
+                            <button class="btn btn-success" type="submit">
+                                <i class="bi bi-send-fill"></i>
+                            </button>
+                        </div>
+                        <p class="small text-white-50">
+                            Dapatkan update terbaru dari kami.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="divider border-success opacity-75 my-4" />
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start small text-white-50">
+                    &copy; 2025 <strong class="text-success">Vigaza Farm</strong>. All
+                    rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end small text-white-50">
+                    Designed with <i class="bi bi-heart-fill text-danger"></i> in Sleman
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ JAVASCRIPT SECTION ============ -->
+    <!-- jQuery & Bootstrap Bundle -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- FSlightbox untuk gallery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.min.js"></script>
+
+    <!-- Script utama -->
+    <script src="../asset/js/main.js"></script>
+
+    <!-- Script khusus portofolio -->
+    <script src="../asset/js/portofolio.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: "ease-in-out",
+            once: true,
+            mirror: false,
+        });
+    </script>
+</body>
+
+</html>

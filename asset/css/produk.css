@@ -1,0 +1,73 @@
+/* Hero Section Full Height */
+.produk-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../img/paralax1.jpg') center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: -100px;
+  padding-top: 90px;
+}
+
+/* Produk Card */
+.produk-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.produk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.produk-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.produk-harga .harga-diskon {
+  font-size: 0.9rem;
+}
+
+/* Feature Icon */
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Testimoni Card */
+.testimoni-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Divider */
+.divider {
+  width: 80px;
+  height: 3px;
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .produk-hero {
+    height: 50vh;
+  }
+
+  .produk-hero h1 {
+    font-size: 2.5rem;
+  }
+}
