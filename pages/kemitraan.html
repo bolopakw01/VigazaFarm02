@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VigazaFarm</title>
+    <link rel="icon" href="asset/img/icon.png" type="image/png" />
+
+    <!-- Link ke file CSS utama -->
+    <link rel="stylesheet" href="../asset/css/style.css" />
+    <link rel="stylesheet" href="../asset/css/kemitraan.css" />
+
+    <!-- Bootstrap CSS & Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ==================== BTT ==================== -->
+    <!-- Back to Top Button - Improved Version -->
+    <button id="backToTopBtn" class="back-to-top btn btn-success shadow" aria-label="Back to top">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+
+    <!-- ============ HEADER / NAVBAR ============ -->
+
+    <header class="fixed-top">
+        <nav class="navbar">
+            <div class="container-fluid d-flex justify-content-between align-items-center p-2 px-4">
+                <!-- LOGO -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img class="vflogo" src="../asset/img/logo1.png" alt="Vigaza Farm Logo" />
+                </a>
+
+                <!-- HAMBURGER (mobile only) -->
+                <div id="nav-icon3" class="d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- MENU NAVIGASI DESKTOP -->
+                <ul class="desktopnav navbar-nav d-none d-lg-flex flex-row align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a>
+                    </li>
+                    <!-- kode dropdown : -->
+                    <li class="nav-item dropdown position-relative">
+                        <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button"
+                            aria-expanded="false">
+                            <i class="bi bi-tools me-1"></i>Service
+                        </a>
+                        <ul class="dropdown-menu position-absolute start-0 mt-2 shadow glass-effect"
+                            aria-labelledby="serviceDropdown">
+                            <li>
+                                <a class="dropdown-item teks-success" href="/pages/produk.html">
+                                    <i class="bi bi-box-seam me-2"></i>Produk
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item teks-success" href="kemitraan.html">
+                                    <i class="bi bi-people-fill me-2"></i>Kemitraan
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/portofolio.html"><i class="bi bi-images me-1"></i>Portfolio</a>
+                    </li>
+                    <!-- menu Login -->
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="/pages/flippage.html">
+                            <i class="bi bi-box-arrow-in-right me-1"></i>Login
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- MENU NAVIGASI MOBILE (popup) -->
+                <div class="popup-menu" id="popupMenu">
+                    <a href="index.html"><i class="bi bi-house-door me-2"></i>Home</a>
+                    <a href="about.html"><i class="bi bi-info-circle me-2"></i>About</a>
+                    <a href="produk.html"><i class="bi bi-box-seam me-2"></i>Produk</a>
+                    <a href="kemitraan.html"><i class="bi bi-people-fill me-2"></i>Kemitraan</a>
+                    <a href="portofolio.html"><i class="bi bi-images me-2"></i>Portfolio</a>
+                    <a href="contact.html"><i class="bi bi-box-arrow-in-right me-1"></i>Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="kemitraan-hero bg-success position-relative overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center min-vh-70 py-5">
+                    <div class="col-lg-10 mx-auto text-center">
+                        <h1 class="display-3 fw-bold text-white mb-4" style="text-shadow:0 4px 24px rgba(0,0,0,0.25);">
+                            Kemitraan Vigaza Farm 2025
+                        </h1>
+                        <p class="lead text-white-50 mb-5 fs-4" style="max-width:600px;margin:auto;">
+                            Bangun usaha ternak puyuh menguntungkan dengan dukungan penuh dari kami.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <button class="btn btn-success btn-lg px-5 py-3 fw-bold shadow" data-bs-toggle="modal"
+                                data-bs-target="#kemitraanModal">
+                                <i class="bi bi-pencil-square me-2"></i>Daftar Sekarang
+                            </button>
+                            <a href="https://wa.me/6281234567890" class="btn btn-outline-light btn-lg px-5 py-3 shadow">
+                                <i class="bi bi-whatsapp me-2"></i> Konsultasi Gratis
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefit Section -->
+        <section class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 mb-3">
+                        <i class="bi bi-people-fill me-2"></i>Kemitraan
+                    </span>
+                    <h2 class="display-5 fw-bold mb-3">Keuntungan Bermitra</h2>
+                    <p class="text-muted mx-auto" style="max-width: 700px">Kami memberikan dukungan penuh untuk
+                        kesuksesan usaha Anda</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="benefit-card h-100">
+                            <div class="benefit-icon bg-success">
+                                <i class="bi bi-egg-fried"></i>
+                            </div>
+                            <h5>Pasar Terjamin</h5>
+                            <p>Kami membeli kembali seluruh produksi telur dan daging dengan harga stabil</p>
+                            <div class="benefit-badge">Min. 500 butir/hari</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="benefit-card h-100">
+                            <div class="benefit-icon bg-success">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <h5>Pelatihan Intensif</h5>
+                            <p>Pelatihan 5 hari teknik budidaya modern dan manajemen usaha</p>
+                            <div class="benefit-badge">Gratis untuk mitra</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="benefit-card h-100">
+                            <div class="benefit-icon bg-success">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h5>Bibit Unggul</h5>
+                            <p>DOC puyuh dengan produktivitas tinggi <br> (90% HD, mortalitas &lt;5%)</p>
+                            <div class="benefit-badge">Garansi 3 hari</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="benefit-card h-100">
+                            <div class="benefit-icon bg-success">
+                                <i class="bi bi-currency-exchange"></i>
+                            </div>
+                            <h5>Pembiayaan</h5>
+                            <p>Skema bagi hasil untuk mitra dengan modal terbatas</p>
+                            <div class="benefit-badge">Bunga 0%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requirements Section -->
+        <section class="py-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="requirements-image">
+                            <img src="https://via.placeholder.com/500x350?text=Kandang+Standar" alt="Kandang Standar"
+                                class="img-fluid rounded shadow">
+                            <div class="image-badge bg-success">Standar Kami</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold mb-4">Persyaratan Kemitraan</h2>
+                        <p class="mb-4">Untuk menjaga kualitas dan keberlanjutan usaha, kami menerapkan standar
+                            tertentu:</p>
+
+                        <div class="requirement-item">
+                            <div class="requirement-icon bg-success text-white">
+                                <i class="bi bi-check2-circle"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Kandang Standar</h5>
+                                <ul class="text-muted">
+                                    <li>Luas minimal 3x4 m (skala kecil) atau 5x10 m (skala komersial)</li>
+                                    <li>Sistem ventilasi memadai</li>
+                                    <li>Suhu stabil 25-30°C</li>
+                                    <li>Jarak minimal 500m dari pemukiman padat</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="requirement-item">
+                            <div class="requirement-icon bg-success text-white">
+                                <i class="bi bi-check2-circle"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Komitmen</h5>
+                                <ul class="text-muted">
+                                    <li>Kesediaan menerapkan SOP Vigaza Farm</li>
+                                    <li>Mengikuti program pembinaan rutin</li>
+                                    <li>Menyetorkan hasil panen sesuai kesepakatan</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="requirement-item">
+                            <div class="requirement-icon bg-success text-white">
+                                <i class="bi bi-check2-circle"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Dokumen</h5>
+                                <ul class="text-muted">
+                                    <li>Fotokopi KTP</li>
+                                    <li>Surat kepemilikan/izin penggunaan lahan</li>
+                                    <li>Surat kesehatan lingkungan (jika diperlukan)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-5 bg-light">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Proses Bergabung</h2>
+                    <p class="text-muted mx-auto" style="max-width: 700px">Hanya 5 langkah mudah menjadi mitra Vigaza
+                        Farm</p>
+                </div>
+
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="process-content">
+                            <div class="process-number">1</div>
+                            <h5 class="fw-bold mt-3">Pendaftaran</h5>
+                            <p class="text-muted">Isi formulir pendaftaran online</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-content">
+                            <div class="process-number">2</div>
+                            <h5 class="fw-bold mt-3">Survey</h5>
+                            <p class="text-muted">Tim kami mengunjungi lokasi</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-content">
+                            <div class="process-number">3</div>
+                            <h5 class="fw-bold mt-3">Evaluasi</h5>
+                            <p class="text-muted">Analisis kelayakan usaha</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-content">
+                            <div class="process-number">4</div>
+                            <h5 class="fw-bold mt-3">MoU</h5>
+                            <p class="text-muted">Penandatanganan perjanjian</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-content">
+                            <div class="process-number">5</div>
+                            <h5 class="fw-bold mt-3">Operasional</h5>
+                            <p class="text-muted">Mulai budidaya dengan pendampingan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <button class="btn btn-success btn-lg px-4 py-2" data-bs-toggle="modal"
+                        data-bs-target="#kemitraanModal">
+                        <i class="bi bi-pencil-square me-2"></i>Mulai Pendaftaran
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Kata Mitra Kami</h2>
+                    <p class="text-muted mx-auto" style="max-width: 700px">Pengalaman nyata mitra yang telah bergabung
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <img src="https://via.placeholder.com/80x80?text=Photo" alt="Testimoni 1"
+                                    class="testimonial-img">
+                                <div>
+                                    <h5 class="mb-0">Budi Santoso</h5>
+                                    <small class="text-muted">Mitra sejak 2022 - Sleman</small>
+                                </div>
+                            </div>
+                            <div class="testimonial-body">
+                                <p>"Dalam 6 bulan sudah balik modal, sekarang profit konsisten 5-7 juta per bulan.
+                                    Pendampingan dari tim Vigaza sangat membantu."</p>
+                                <div class="testimonial-rating text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <img src="https://via.placeholder.com/80x80?text=Photo" alt="Testimoni 2"
+                                    class="testimonial-img">
+                                <div>
+                                    <h5 class="mb-0">Siti Aminah</h5>
+                                    <small class="text-muted">Mitra sejak 2023 - Bantul</small>
+                                </div>
+                            </div>
+                            <div class="testimonial-body">
+                                <p>"Dari 300 ekor sekarang sudah berkembang jadi 1500 ekor. Pasar terjamin jadi tidak
+                                    perlu khawatir hasil panen."</p>
+                                <div class="testimonial-rating text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <img src="https://via.placeholder.com/80x80?text=Photo" alt="Testimoni 3"
+                                    class="testimonial-img">
+                                <div>
+                                    <h5 class="mb-0">Ahmad Fauzi</h5>
+                                    <small class="text-muted">Mitra sejak 2021 - Klaten</small>
+                                </div>
+                            </div>
+                            <div class="testimonial-body">
+                                <p>"Sistem kemitraan yang transparan. Sekarang sudah punya 3 unit ternak dengan omset
+                                    15-20 juta per bulan."</p>
+                                <div class="testimonial-rating text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5 bg-success text-white">
+            <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-4 mb-lg-0">
+                        <h3 class="fw-bold mb-3">Siap Bergabung dengan Kami?</h3>
+                        <p class="mb-0">Mulai perjalanan usaha ternak puyuh yang menguntungkan sekarang</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <button class="btn btn-light btn-lg px-4 py-2 fw-bold" data-bs-toggle="modal"
+                            data-bs-target="#kemitraanModal">
+                            <i class="bi bi-pencil-square me-2"></i>Daftar Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Form -->
+        <div class="modal fade" id="kemitraanModal" tabindex="-1" aria-labelledby="kemitraanModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+                    <!-- Modal Header with Gradient Background -->
+                    <div class="modal-header bg-gradient-success text-white">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-circle bg-white text-success me-3">
+                                <i class="bi bi-people-fill fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="modal-title mb-0">Formulir Pendaftaran Mitra</h5>
+                                <p class="small mb-0 opacity-75">Mulai perjalanan kemitraan Anda dengan Vigaza Farm</p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body p-4 p-md-5">
+                        <!-- Info Alert with Subtle Design -->
+                        <div class="alert alert-light-success border-start border-success border-3 bg-light mb-4">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-info-circle-fill text-success me-2"></i>
+                                <div>
+                                    <h6 class="alert-heading mb-1">Terima kasih atas ketertarikan Anda!</h6>
+                                    <p class="small mb-0">Sebelum penandatanganan MoU, kami membutuhkan beberapa data
+                                        untuk survey dan evaluasi.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form id="kemitraanForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <!-- Name Input -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="namaLengkap"
+                                            placeholder="Nama Lengkap" required>
+                                        <label for="namaLengkap">Nama Lengkap <span class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">
+                                            Mohon isi nama lengkap Anda
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Phone Input -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="nomorHP"
+                                            placeholder="Nomor HP (WhatsApp)" required>
+                                        <label for="nomorHP">Nomor HP (WhatsApp) <span
+                                                class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">
+                                            Mohon isi nomor WhatsApp Anda
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Email Input -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Alamat Email"
+                                            required>
+                                        <label for="email">Alamat Email <span class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">
+                                            Mohon isi alamat email yang valid
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Address Textarea -->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="alamatKandang"
+                                            placeholder="Alamat Lokasi Kandang" style="height: 100px"
+                                            required></textarea>
+                                        <label for="alamatKandang">Alamat Lokasi Kandang <span
+                                                class="text-danger">*</span></label>
+                                        <small class="text-muted">Mohon cantumkan alamat lengkap termasuk RT/RW</small>
+                                        <div class="invalid-feedback">
+                                            Mohon isi alamat lokasi kandang
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Land Area Input -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="luasLahan"
+                                            placeholder="Luas Lahan/Kandang (m²)" required>
+                                        <label for="luasLahan">Luas Lahan/Kandang (m²) <span
+                                                class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">
+                                            Mohon isi luas lahan/kandang
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Capacity Select -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="kapasitas" required>
+                                            <option value="" selected disabled></option>
+                                            <option value="500-1000">500-1.000 ekor</option>
+                                            <option value="1000-3000">1.000-3.000 ekor</option>
+                                            <option value="3000-5000">3.000-5.000 ekor</option>
+                                            <option value="5000+">>5.000 ekor</option>
+                                        </select>
+                                        <label for="kapasitas">Kapasitas Puyuh <span
+                                                class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">
+                                            Mohon pilih kapasitas puyuh
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Agreement Checkbox -->
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="setujuSyarat" required>
+                                        <label class="form-check-label" for="setujuSyarat">
+                                            Saya menyatakan data yang diisi benar dan bersedia mengikuti prosedur
+                                            kemitraan
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Anda harus menyetujui syarat dan ketentuan
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Form Buttons -->
+                                <div class="col-12 mt-4">
+                                    <div class="d-flex justify-content-between gap-3 flex-column flex-sm-row">
+                                        <button type="button" class="btn btn-outline-secondary btn-lg py-3 fw-bold flex-fill" data-bs-dismiss="modal">
+                                            <i class="bi bi-x-circle me-2"></i> Batalkan
+                                        </button>
+                                        <button type="submit" class="btn btn-success btn-lg py-3 fw-bold flex-fill">
+                                            <i class="bi bi-send-fill me-2"></i> Kirim Pendaftaran
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ================= FOOTER SECTION ================= -->
+    <footer class="footer text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Brand & Deskripsi -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="footer-brand">
+                        <img src="../asset/img/icon.png" alt="Vigaza Logo" class="img-fluid mb-3"
+                            style="max-height: 60px" />
+                        <h4 class="fw-bold text-success">Vigaza Farm</h4>
+                        <p class="small text-white-50 mt-3 pe-3">
+                            Penyedia produk puyuh berkualitas: telur segar, daging, dan
+                            layanan edukatif. Komitmen kami adalah mutu dan pelayanan
+                            terbaik.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Navigasi -->
+                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <h6 class="fw-semibold text-uppercase text-success mb-3">
+                        Navigasi
+                    </h6>
+                    <ul class="list-unstyled small footer-links">
+                        <li class="mb-2">
+                            <a href="index.html" class="text-white-50 text-decoration-none hover-success">Beranda</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="aboutus.html" class="text-white-50 text-decoration-none hover-success">Tentang
+                                Kami</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="ourwork.html" class="text-white-50 text-decoration-none hover-success">Galeri</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="contact.html" class="text-white-50 text-decoration-none hover-success">Kontak</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="blog.html" class="text-white-50 text-decoration-none hover-success">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <h6 class="fw-semibold text-uppercase text-success mb-3">Kontak</h6>
+                    <ul class="list-unstyled small text-white-50 footer-contact">
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-geo-alt-fill text-success me-2 mt-1"></i>
+                            <span>Jl. Gading Raya, Palgading, Sinduharjo, Sleman 55581</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-envelope-fill text-success me-2 mt-1"></i>
+                            <a href="mailto:vigazafarm@gmail.com"
+                                class="text-white-50 text-decoration-none hover-success">vigazafarm@gmail.com</a>
+                        </li>
+                        <li class="d-flex">
+                            <i class="bi bi-whatsapp text-success me-2 mt-1"></i>
+                            <a href="https://wa.me/6281234567890"
+                                class="text-white-50 text-decoration-none hover-success">+62
+                                812-3456-7890</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sosial Media & Newsletter -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <h6 class="fw-semibold text-uppercase text-success mb-3">
+                        Ikuti Kami
+                    </h6>
+                    <div class="social-icons d-flex flex-wrap gap-3 mb-4">
+                        <a href="https://www.facebook.com/vigazafarm" class="social-circle" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/vigazafarm/" class="social-circle" title="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@vigazafarm" class="social-circle" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@vigazafarm" class="social-circle" title="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+
+                    <h6 class="fw-semibold text-uppercase text-success mb-3">
+                        Newsletter
+                    </h6>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-2">
+                            <input type="email" class="form-control bg-black border-success text-white"
+                                placeholder="Email Anda" />
+                            <button class="btn btn-success" type="submit">
+                                <i class="bi bi-send-fill"></i>
+                            </button>
+                        </div>
+                        <p class="small text-white-50">
+                            Dapatkan update terbaru dari kami.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="divider border-success opacity-75 my-4" />
+
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start small text-white-50">
+                    &copy; 2025 <strong class="text-success">Vigaza Farm</strong>. All
+                    rights reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end small text-white-50">
+                    Designed with <i class="bi bi-heart-fill text-danger"></i> in Sleman
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ JAVASCRIPT SECTION ============ -->
+    <!-- jQuery & Bootstrap Bundle -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="../asset/js/main.js"></script>
+    <script src="../asset/js/kemitraan.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800, // Global animation duration
+            easing: "ease-in-out", // Animation easing
+            once: true, // Whether animation should happen only once
+            mirror: false, // Whether elements should animate out while scrolling past them
+        });
+    </script>
+</body>
+
+</html>

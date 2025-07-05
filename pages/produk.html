@@ -2,101 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VigazaFarm</title>
-    <link rel="icon" href="asset/img/icon.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VigazaFarm</title>
+  <link rel="icon" href="asset/img/icon.png" type="image/png" />
 
-    <!-- Link ke file CSS utama -->
-    <link rel="stylesheet" href="../asset/css/style.css" />
-    <link rel="stylesheet" href="../asset/css/produk.css" />
+  <!-- Link ke file CSS utama -->
+  <link rel="stylesheet" href="../asset/css/style.css" />
+  <link rel="stylesheet" href="../asset/css/produk.css" />
 
-    <!-- Bootstrap CSS & Icon -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Bootstrap CSS & Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
 
-    <!-- ==================== BTT ==================== -->
-    <!-- Back to Top Button - Improved Version -->
-    <button id="backToTopBtn" class="back-to-top btn btn-success shadow" aria-label="Back to top">
-        <i class="bi bi-arrow-up-short"></i>
-    </button>
+  <!-- ==================== BTT ==================== -->
+  <!-- Back to Top Button - Improved Version -->
+  <button id="backToTopBtn" class="back-to-top btn btn-success shadow" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
 
 
-    <!-- ============ HEADER / NAVBAR ============ -->
+  <!-- ============ HEADER / NAVBAR ============ -->
 
-    <header class="fixed-top">
-        <nav class="navbar">
-            <div class="container-fluid d-flex justify-content-between align-items-center p-2 px-4">
-                <!-- LOGO -->
-                <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                    <img class="vflogo" src="../asset/img/logo1.png" alt="Vigaza Farm Logo" />
+  <header class="fixed-top">
+    <nav class="navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center p-2 px-4">
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+          <img class="vflogo" src="../asset/img/logo1.png" alt="Vigaza Farm Logo" />
+        </a>
+
+        <!-- HAMBURGER (mobile only) -->
+        <div id="nav-icon3" class="d-lg-none">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- MENU NAVIGASI DESKTOP -->
+        <ul class="desktopnav navbar-nav d-none d-lg-flex flex-row align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a>
+          </li>
+          <!-- kode dropdown : -->
+          <li class="nav-item dropdown position-relative">
+            <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button" aria-expanded="false">
+              <i class="bi bi-tools me-1"></i>Service
+            </a>
+            <ul class="dropdown-menu position-absolute start-0 mt-2 shadow glass-effect"
+              aria-labelledby="serviceDropdown">
+              <li>
+                <a class="dropdown-item teks-success" href="/pages/produk.html">
+                  <i class="bi bi-box-seam me-2"></i>Produk
                 </a>
+              </li>
+              <li>
+                <a class="dropdown-item teks-success" href="kemitraan.html">
+                  <i class="bi bi-people-fill me-2"></i>Kemitraan
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/portofolio.html"><i class="bi bi-images me-1"></i>Portfolio</a>
+          </li>
+          <!-- menu Login -->
+          <li class="nav-item">
+            <a class="nav-link login-btn" href="/pages/flippage.html">
+              <i class="bi bi-box-arrow-in-right me-1"></i>Login
+            </a>
+          </li>
+        </ul>
 
-                <!-- HAMBURGER (mobile only) -->
-                <div id="nav-icon3" class="d-lg-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <!-- MENU NAVIGASI DESKTOP -->
-                <ul class="desktopnav navbar-nav d-none d-lg-flex flex-row align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html"><i class="bi bi-house-door me-1"></i>Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"><i class="bi bi-info-circle me-1"></i>About</a>
-                    </li>
-                    <!-- kode dropdown : -->
-                    <li class="nav-item dropdown position-relative">
-                        <a class="nav-link dropdown-toggle" href="#" id="serviceDropdown" role="button"
-                            aria-expanded="false">
-                            <i class="bi bi-tools me-1"></i>Service
-                        </a>
-                        <ul class="dropdown-menu position-absolute start-0 mt-2 shadow glass-effect"
-                            aria-labelledby="serviceDropdown">
-                            <li>
-                                <a class="dropdown-item teks-success" href="/pages/produk.html">
-                                    <i class="bi bi-box-seam me-2"></i>Produk
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item teks-success" href="kemitraan.html">
-                                    <i class="bi bi-people-fill me-2"></i>Kemitraan
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/pages/portofolio.html"><i class="bi bi-images me-1"></i>Portfolio</a>
-                    </li>
-                    <!-- menu Login -->
-                    <li class="nav-item">
-                        <a class="nav-link login-btn" href="/pages/flippage.html">
-                            <i class="bi bi-box-arrow-in-right me-1"></i>Login
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- MENU NAVIGASI MOBILE (popup) -->
-                <div class="popup-menu" id="popupMenu">
-                    <a href="index.html"><i class="bi bi-house-door me-2"></i>Home</a>
-                    <a href="about.html"><i class="bi bi-info-circle me-2"></i>About</a>
-                    <a href="produk.html"><i class="bi bi-box-seam me-2"></i>Produk</a>
-                    <a href="kemitraan.html"><i class="bi bi-people-fill me-2"></i>Kemitraan</a>
-                    <a href="portofolio.html"><i class="bi bi-images me-2"></i>Portfolio</a>
-                    <a href="contact.html"><i class="bi bi-box-arrow-in-right me-1"></i>Login</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+        <!-- MENU NAVIGASI MOBILE (popup) -->
+        <div class="popup-menu" id="popupMenu">
+          <a href="index.html"><i class="bi bi-house-door me-2"></i>Home</a>
+          <a href="about.html"><i class="bi bi-info-circle me-2"></i>About</a>
+          <a href="produk.html"><i class="bi bi-box-seam me-2"></i>Produk</a>
+          <a href="kemitraan.html"><i class="bi bi-people-fill me-2"></i>Kemitraan</a>
+          <a href="portofolio.html"><i class="bi bi-images me-2"></i>Portfolio</a>
+          <a href="contact.html"><i class="bi bi-box-arrow-in-right me-1"></i>Login</a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
 <main>
   <!-- ======= Hero Section Produk ======= -->
@@ -104,15 +103,22 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <h1 class="display-4 fw-bold text-white mb-4">Produk Unggulan Kami</h1>
-          <p class="lead text-white-50 mb-5">
+          <h1 class="display-3 fw-bold text-white mb-4 animate__animated animate__fadeInDown">Produk Unggulan Kami</h1>
+          <p class="lead text-white mb-5 animate__animated animate__fadeIn animate__delay-1s">
             Telur puyuh berkualitas tinggi dengan nutrisi lengkap untuk kesehatan keluarga Anda
           </p>
-          <a href="#produk-kami" class="btn btn-success btn-lg rounded-pill px-4 py-2">
+          <a href="#produk-kami" class="btn btn-success btn-lg rounded-pill px-4 py-3 animate__animated animate__fadeInUp animate__delay-1s">
             <i class="bi bi-arrow-down-circle me-2"></i>Lihat Produk
           </a>
         </div>
       </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#198754"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="#198754"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#198754"></path>
+      </svg>
     </div>
   </section>
 
@@ -120,22 +126,28 @@
   <section id="produk-kami" class="produk-section py-5">
     <div class="container">
       <div class="section-title text-center mb-5">
-        <h2 class="text-success fw-bold">Produk Kami</h2>
-        <p class="text-muted">Berbagai produk unggulan dari peternakan puyuh kami</p>
+        <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 mb-3 rounded-pill">
+          <i class="bi bi-box-seam-fill me-2"></i>Produk
+        </span>
+        <h2 class="text-success fw-bold display-5">Produk Kami</h2>
+        <p class="text-muted fs-5">Berbagai produk unggulan dari peternakan puyuh kami</p>
         <div class="divider mx-auto bg-success"></div>
       </div>
 
       <div class="row g-4">
         <!-- Produk 1 -->
         <div class="col-lg-4 col-md-6">
-          <div class="produk-card card h-100 border-0 shadow-sm">
+          <div class="produk-card card h-100 border-0 shadow-sm overflow-hidden">
             <div class="produk-badge bg-danger">Best Seller</div>
-            <img src="https://via.placeholder.com/400x300?text=Telur+Puyuh+Segar" width="400" height="300" class="card-img-top" alt="Telur Puyuh Segar">
+            <div class="produk-img-container">
+              <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                class="card-img-top" alt="Telur Puyuh Segar">
+            </div>
             <div class="card-body">
               <h5 class="card-title fw-bold">Telur Puyuh Segar</h5>
               <p class="card-text text-muted small">Kemasan 1kg (isi ±100 butir). Dipanen setiap hari dengan kualitas terbaik.</p>
               <div class="produk-harga mb-3">
-                <span class="harga-utama text-success fw-bold">Rp 25.000</span>
+                <span class="harga-utama text-success fw-bold fs-4">Rp 25.000</span>
                 <span class="harga-diskon text-decoration-line-through text-muted small ms-2">Rp 28.000</span>
               </div>
               <div class="d-flex justify-content-between align-items-center">
@@ -147,23 +159,31 @@
                   <i class="bi bi-star-half"></i>
                   <span class="text-muted ms-1">(128)</span>
                 </div>
-                <button class="btn btn-sm btn-outline-success">
-                  <i class="bi bi-cart-plus"></i> Beli
+                <button class="btn btn-sm btn-success rounded-pill px-3">
+                  <i class="bi bi-cart-plus me-1"></i> Beli
                 </button>
               </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <a href="#" class="text-success small fw-bold text-decoration-none">
+                <i class="bi bi-info-circle me-1"></i> Detail Produk
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Produk 2 -->
         <div class="col-lg-4 col-md-6">
-          <div class="produk-card card h-100 border-0 shadow-sm">
-            <img src="https://via.placeholder.com/400x300?text=Daging+Puyuh" width="400" height="300" class="card-img-top" alt="Daging Puyuh">
+          <div class="produk-card card h-100 border-0 shadow-sm overflow-hidden">
+            <div class="produk-img-container">
+              <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                class="card-img-top" alt="Daging Puyuh">
+            </div>
             <div class="card-body">
               <h5 class="card-title fw-bold">Daging Puyuh Segar</h5>
               <p class="card-text text-muted small">Kemasan 500gr. Daging segar tanpa tambahan bahan pengawet.</p>
               <div class="produk-harga mb-3">
-                <span class="harga-utama text-success fw-bold">Rp 35.000</span>
+                <span class="harga-utama text-success fw-bold fs-4">Rp 35.000</span>
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="produk-rating text-warning small">
@@ -174,24 +194,32 @@
                   <i class="bi bi-star"></i>
                   <span class="text-muted ms-1">(76)</span>
                 </div>
-                <button class="btn btn-sm btn-outline-success">
-                  <i class="bi bi-cart-plus"></i> Beli
+                <button class="btn btn-sm btn-success rounded-pill px-3">
+                  <i class="bi bi-cart-plus me-1"></i> Beli
                 </button>
               </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <a href="#" class="text-success small fw-bold text-decoration-none">
+                <i class="bi bi-info-circle me-1"></i> Detail Produk
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Produk 3 -->
         <div class="col-lg-4 col-md-6">
-          <div class="produk-card card h-100 border-0 shadow-sm">
+          <div class="produk-card card h-100 border-0 shadow-sm overflow-hidden">
             <div class="produk-badge bg-success">New</div>
-            <img src="https://via.placeholder.com/400x300?text=Telur+Puyuh+Asin" width="400" height="300" class="card-img-top" alt="Telur Puyuh Asin">
+            <div class="produk-img-container">
+              <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                class="card-img-top" alt="Telur Puyuh Asin">
+            </div>
             <div class="card-body">
               <h5 class="card-title fw-bold">Telur Puyuh Asin</h5>
               <p class="card-text text-muted small">Kemasan 250gr (isi ±25 butir). Diproses secara tradisional dengan garam pilihan.</p>
               <div class="produk-harga mb-3">
-                <span class="harga-utama text-success fw-bold">Rp 20.000</span>
+                <span class="harga-utama text-success fw-bold fs-4">Rp 20.000</span>
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="produk-rating text-warning small">
@@ -202,23 +230,31 @@
                   <i class="bi bi-star-fill"></i>
                   <span class="text-muted ms-1">(42)</span>
                 </div>
-                <button class="btn btn-sm btn-outline-success">
-                  <i class="bi bi-cart-plus"></i> Beli
+                <button class="btn btn-sm btn-success rounded-pill px-3">
+                  <i class="bi bi-cart-plus me-1"></i> Beli
                 </button>
               </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <a href="#" class="text-success small fw-bold text-decoration-none">
+                <i class="bi bi-info-circle me-1"></i> Detail Produk
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Produk 4 -->
         <div class="col-lg-4 col-md-6">
-          <div class="produk-card card h-100 border-0 shadow-sm">
-            <img src="https://via.placeholder.com/400x300?text=Puyuh+Hidup" width="400" height="300" class="card-img-top" alt="Puyuh Hidup">
+          <div class="produk-card card h-100 border-0 shadow-sm overflow-hidden">
+            <div class="produk-img-container">
+              <img src="https://images.unsplash.com/photo-1556910638-aae12e951f8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                class="card-img-top" alt="Puyuh Hidup">
+            </div>
             <div class="card-body">
               <h5 class="card-title fw-bold">Puyuh Hidup</h5>
               <p class="card-text text-muted small">Usia 1-2 bulan, siap dipelihara atau dipotong. Minimal order 10 ekor.</p>
               <div class="produk-harga mb-3">
-                <span class="harga-utama text-success fw-bold">Rp 15.000/ekor</span>
+                <span class="harga-utama text-success fw-bold fs-4">Rp 15.000/ekor</span>
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="produk-rating text-warning small">
@@ -229,23 +265,31 @@
                   <i class="bi bi-star"></i>
                   <span class="text-muted ms-1">(35)</span>
                 </div>
-                <button class="btn btn-sm btn-outline-success">
-                  <i class="bi bi-cart-plus"></i> Beli
+                <button class="btn btn-sm btn-success rounded-pill px-3">
+                  <i class="bi bi-cart-plus me-1"></i> Beli
                 </button>
               </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <a href="#" class="text-success small fw-bold text-decoration-none">
+                <i class="bi bi-info-circle me-1"></i> Detail Produk
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Produk 5 -->
         <div class="col-lg-4 col-md-6">
-          <div class="produk-card card h-100 border-0 shadow-sm">
-            <img src="https://via.placeholder.com/400x300?text=Pakan+Puyuh" width="400" height="300" class="card-img-top" alt="Pakan Puyuh">
+          <div class="produk-card card h-100 border-0 shadow-sm overflow-hidden">
+            <div class="produk-img-container">
+              <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                class="card-img-top" alt="Pakan Puyuh">
+            </div>
             <div class="card-body">
               <h5 class="card-title fw-bold">Pakan Puyuh Premium</h5>
               <p class="card-text text-muted small">Kemasan 5kg. Formulasi khusus untuk pertumbuhan optimal.</p>
               <div class="produk-harga mb-3">
-                <span class="harga-utama text-success fw-bold">Rp 75.000</span>
+                <span class="harga-utama text-success fw-bold fs-4">Rp 75.000</span>
               </div>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="produk-rating text-warning small">
@@ -256,24 +300,32 @@
                   <i class="bi bi-star"></i>
                   <span class="text-muted ms-1">(29)</span>
                 </div>
-                <button class="btn btn-sm btn-outline-success">
-                  <i class="bi bi-cart-plus"></i> Beli
+                <button class="btn btn-sm btn-success rounded-pill px-3">
+                  <i class="bi bi-cart-plus me-1"></i> Beli
                 </button>
               </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <a href="#" class="text-success small fw-bold text-decoration-none">
+                <i class="bi bi-info-circle me-1"></i> Detail Produk
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Produk 6 -->
         <div class="col-lg-4 col-md-6">
-          <div class="produk-card card h-100 border-0 shadow-sm">
+          <div class="produk-card card h-100 border-0 shadow-sm overflow-hidden">
             <div class="produk-badge bg-info">Bundle</div>
-            <img src="https://via.placeholder.com/400x300?text=Paket+Starter" width="400" height="300" class="card-img-top" alt="Paket Starter">
+            <div class="produk-img-container">
+              <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                class="card-img-top" alt="Paket Starter">
+            </div>
             <div class="card-body">
               <h5 class="card-title fw-bold">Paket Starter Ternak</h5>
               <p class="card-text text-muted small">5 ekor puyuh hidup + 5kg pakan + panduan pemula.</p>
               <div class="produk-harga mb-3">
-                <span class="harga-utama text-success fw-bold">Rp 175.000</span>
+                <span class="harga-utama text-success fw-bold fs-4">Rp 175.000</span>
                 <span class="harga-diskon text-decoration-line-through text-muted small ms-2">Rp 200.000</span>
               </div>
               <div class="d-flex justify-content-between align-items-center">
@@ -285,17 +337,22 @@
                   <i class="bi bi-star-fill"></i>
                   <span class="text-muted ms-1">(18)</span>
                 </div>
-                <button class="btn btn-sm btn-outline-success">
-                  <i class="bi bi-cart-plus"></i> Beli
+                <button class="btn btn-sm btn-success rounded-pill px-3">
+                  <i class="bi bi-cart-plus me-1"></i> Beli
                 </button>
               </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+              <a href="#" class="text-success small fw-bold text-decoration-none">
+                <i class="bi bi-info-circle me-1"></i> Detail Produk
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="text-center mt-5">
-        <button class="btn btn-success px-4 py-2">
+        <button class="btn btn-success px-4 py-3 rounded-pill fs-5">
           <i class="bi bi-grid-3x3-gap me-2"></i>Lihat Semua Produk
         </button>
       </div>
@@ -306,49 +363,49 @@
   <section class="keunggulan-section py-5 bg-light">
     <div class="container">
       <div class="section-title text-center mb-5">
-        <h2 class="text-success fw-bold">Keunggulan Produk Kami</h2>
-        <p class="text-muted">Mengapa harus memilih produk Vigaza Farm?</p>
+        <h2 class="text-success fw-bold display-5">Keunggulan Produk Kami</h2>
+        <p class="text-muted fs-5">Mengapa harus memilih produk Vigaza Farm?</p>
         <div class="divider mx-auto bg-success"></div>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <div class="feature-card text-center p-4 h-100">
-            <div class="feature-icon mx-auto bg-success bg-opacity-10 text-success rounded-circle mb-3">
-              <i class="bi bi-shield-check fs-3"></i>
+          <div class="feature-card text-center p-4 h-100 border-0 shadow-sm rounded-3">
+            <div class="feature-icon mx-auto bg-success bg-opacity-10 text-success rounded-circle mb-4 p-3">
+              <i class="bi bi-shield-check fs-2"></i>
             </div>
             <h5 class="fw-bold mb-3">Hygienis</h5>
-            <p class="text-muted small">Diproses dengan standar kebersihan tinggi dan pengemasan steril</p>
+            <p class="text-muted">Diproses dengan standar kebersihan tinggi dan pengemasan steril</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="feature-card text-center p-4 h-100">
-            <div class="feature-icon mx-auto bg-success bg-opacity-10 text-success rounded-circle mb-3">
-              <i class="bi bi-heart-pulse fs-3"></i>
+          <div class="feature-card text-center p-4 h-100 border-0 shadow-sm rounded-3">
+            <div class="feature-icon mx-auto bg-success bg-opacity-10 text-success rounded-circle mb-4 p-3">
+              <i class="bi bi-heart-pulse fs-2"></i>
             </div>
             <h5 class="fw-bold mb-3">Bergizi Tinggi</h5>
-            <p class="text-muted small">Kaya protein, vitamin, dan mineral untuk kebutuhan nutrisi harian</p>
+            <p class="text-muted">Kaya protein, vitamin, dan mineral untuk kebutuhan nutrisi harian</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="feature-card text-center p-4 h-100">
-            <div class="feature-icon mx-auto bg-success bg-opacity-10 text-success rounded-circle mb-3">
-              <i class="bi bi-egg-fried fs-3"></i>
+          <div class="feature-card text-center p-4 h-100 border-0 shadow-sm rounded-3">
+            <div class="feature-icon mx-auto bg-success bg-opacity-10 text-success rounded-circle mb-4 p-3">
+              <i class="bi bi-egg-fried fs-2"></i>
             </div>
             <h5 class="fw-bold mb-3">Segar Setiap Hari</h5>
-            <p class="text-muted small">Dipanen langsung dari peternakan kami setiap pagi</p>
+            <p class="text-muted">Dipanen langsung dari peternakan kami setiap pagi</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="feature-card text-center p-4 h-100">
-            <div class="feature-icon mx-auto bg-success bg-opacity-10 text-success rounded-circle mb-3">
-              <i class="bi bi-award fs-3"></i>
+          <div class="feature-card text-center p-4 h-100 border-0 shadow-sm rounded-3">
+            <div class="feature-icon mx-auto bg-success bg-opacity-10 text-success rounded-circle mb-4 p-3">
+              <i class="bi bi-award fs-2"></i>
             </div>
             <h5 class="fw-bold mb-3">Harga Terbaik</h5>
-            <p class="text-muted small">Harga kompetitif dengan kualitas premium</p>
+            <p class="text-muted">Harga kompetitif dengan kualitas premium</p>
           </div>
         </div>
       </div>
@@ -356,22 +413,24 @@
   </section>
 
   <!-- ======= Testimoni Section ======= -->
-  <section class="testimoni-section py-5">
+  <section class="testimoni-section py-5 bg-white">
     <div class="container">
       <div class="section-title text-center mb-5">
-        <h2 class="text-success fw-bold">Testimoni Pelanggan</h2>
-        <p class="text-muted">Apa kata mereka tentang produk kami</p>
+        <h2 class="text-success fw-bold display-5">Testimoni Pelanggan</h2>
+        <p class="text-muted fs-5">Apa kata mereka tentang produk kami</p>
         <div class="divider mx-auto bg-success"></div>
       </div>
 
       <div class="row g-4">
         <div class="col-lg-4">
-          <div class="testimoni-card p-4 h-100">
-            <div class="d-flex align-items-center mb-3">
-              <img src="https://via.placeholder.com/60x60?text=Customer+1" width="60" height="60" class="rounded-circle me-3" alt="Pelanggan 1">
+          <div class="testimoni-card p-4 h-100 border-0 shadow-sm rounded-3">
+            <div class="d-flex align-items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" width="70" height="70"
+                class="rounded-circle me-3 border border-3 border-success" alt="Pelanggan 1">
               <div>
                 <h6 class="fw-bold mb-0">Budi Santoso</h6>
-                <div class="text-warning small">
+                <span class="text-muted small">Pelanggan sejak 2020</span>
+                <div class="text-warning mt-1">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -380,17 +439,19 @@
                 </div>
               </div>
             </div>
-            <p class="text-muted">"Telur puyuhnya selalu segar dan ukurannya seragam. Keluarga saya sangat menyukainya untuk lauk sehari-hari."</p>
+            <p class="text-muted mb-0">"Telur puyuhnya selalu segar dan ukurannya seragam. Keluarga saya sangat menyukainya untuk lauk sehari-hari."</p>
           </div>
         </div>
 
         <div class="col-lg-4">
-          <div class="testimoni-card p-4 h-100">
-            <div class="d-flex align-items-center mb-3">
-              <img src="https://via.placeholder.com/60x60?text=Customer+2" width="60" height="60" class="rounded-circle me-3" alt="Pelanggan 2">
+          <div class="testimoni-card p-4 h-100 border-0 shadow-sm rounded-3">
+            <div class="d-flex align-items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" width="70" height="70"
+                class="rounded-circle me-3 border border-3 border-success" alt="Pelanggan 2">
               <div>
                 <h6 class="fw-bold mb-0">Anita Rahayu</h6>
-                <div class="text-warning small">
+                <span class="text-muted small">Pelanggan sejak 2021</span>
+                <div class="text-warning mt-1">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -399,17 +460,19 @@
                 </div>
               </div>
             </div>
-            <p class="text-muted">"Paket starter ternaknya sangat membantu saya yang baru memulai beternak puyuh. Panduannya jelas dan mudah dipahami."</p>
+            <p class="text-muted mb-0">"Paket starter ternaknya sangat membantu saya yang baru memulai beternak puyuh. Panduannya jelas dan mudah dipahami."</p>
           </div>
         </div>
 
         <div class="col-lg-4">
-          <div class="testimoni-card p-4 h-100">
-            <div class="d-flex align-items-center mb-3">
-              <img src="https://via.placeholder.com/60x60?text=Customer+3" width="60" height="60" class="rounded-circle me-3" alt="Pelanggan 3">
+          <div class="testimoni-card p-4 h-100 border-0 shadow-sm rounded-3">
+            <div class="d-flex align-items-center mb-4">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" width="70" height="70"
+                class="rounded-circle me-3 border border-3 border-success" alt="Pelanggan 3">
               <div>
                 <h6 class="fw-bold mb-0">Rudi Hermawan</h6>
-                <div class="text-warning small">
+                <span class="text-muted small">Pelanggan sejak 2019</span>
+                <div class="text-warning mt-1">
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -418,7 +481,7 @@
                 </div>
               </div>
             </div>
-            <p class="text-muted">"Daging puyuhnya empuk dan tidak bau amis. Cocok untuk berbagai masakan khas keluarga kami."</p>
+            <p class="text-muted mb-0">"Daging puyuhnya empuk dan tidak bau amis. Cocok untuk berbagai masakan khas keluarga kami."</p>
           </div>
         </div>
       </div>
@@ -426,15 +489,15 @@
   </section>
 
   <!-- ======= CTA Section ======= -->
-  <section class="cta-section py-5 bg-success text-white">
-    <div class="container">
+  <section class="cta-section py-5 bg-success text-white position-relative">
+    <div class="container position-relative z-index-1">
       <div class="row align-items-center">
         <div class="col-lg-8 mb-4 mb-lg-0">
-          <h3 class="fw-bold mb-3">Siap Memesan Produk Kami?</h3>
-          <p class="mb-0">Pesan sekarang dan dapatkan produk terbaik langsung dari peternakan kami.</p>
+          <h3 class="fw-bold mb-3 display-6">Siap Memesan Produk Kami?</h3>
+          <p class="mb-0 fs-5">Pesan sekarang dan dapatkan produk terbaik langsung dari peternakan kami.</p>
         </div>
         <div class="col-lg-4 text-lg-end">
-          <a href="https://wa.me/6281234567890" class="btn btn-light btn-lg rounded-pill px-4">
+          <a href="https://wa.me/6281234567890" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold">
             <i class="bi bi-whatsapp me-2"></i>Pesan via WhatsApp
           </a>
         </div>
@@ -443,142 +506,139 @@
   </section>
 </main>
 
-    <!-- ================= FOOTER SECTION ================= -->
-    <footer class="footer text-white pt-5 pb-4">
-        <div class="container">
-            <div class="row gy-4">
-                <!-- Brand & Deskripsi -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="footer-brand">
-                        <img src="../asset/img/icon.png" alt="Vigaza Logo" class="img-fluid mb-3"
-                            style="max-height: 60px" />
-                        <h4 class="fw-bold text-success">Vigaza Farm</h4>
-                        <p class="small text-white-50 mt-3 pe-3">
-                            Penyedia produk puyuh berkualitas: telur segar, daging, dan
-                            layanan edukatif. Komitmen kami adalah mutu dan pelayanan
-                            terbaik.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Navigasi -->
-                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <h6 class="fw-semibold text-uppercase text-success mb-3">
-                        Navigasi
-                    </h6>
-                    <ul class="list-unstyled small footer-links">
-                        <li class="mb-2">
-                            <a href="index.html" class="text-white-50 text-decoration-none hover-success">Beranda</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="aboutus.html" class="text-white-50 text-decoration-none hover-success">Tentang
-                                Kami</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="ourwork.html" class="text-white-50 text-decoration-none hover-success">Galeri</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="contact.html" class="text-white-50 text-decoration-none hover-success">Kontak</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="blog.html" class="text-white-50 text-decoration-none hover-success">Blog</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Kontak -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <h6 class="fw-semibold text-uppercase text-success mb-3">Kontak</h6>
-                    <ul class="list-unstyled small text-white-50 footer-contact">
-                        <li class="mb-3 d-flex">
-                            <i class="bi bi-geo-alt-fill text-success me-2 mt-1"></i>
-                            <span>Jl. Gading Raya, Palgading, Sinduharjo, Sleman 55581</span>
-                        </li>
-                        <li class="mb-3 d-flex">
-                            <i class="bi bi-envelope-fill text-success me-2 mt-1"></i>
-                            <a href="mailto:vigazafarm@gmail.com"
-                                class="text-white-50 text-decoration-none hover-success">vigazafarm@gmail.com</a>
-                        </li>
-                        <li class="d-flex">
-                            <i class="bi bi-whatsapp text-success me-2 mt-1"></i>
-                            <a href="https://wa.me/6281234567890"
-                                class="text-white-50 text-decoration-none hover-success">+62
-                                812-3456-7890</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Sosial Media & Newsletter -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <h6 class="fw-semibold text-uppercase text-success mb-3">
-                        Ikuti Kami
-                    </h6>
-                    <div class="social-icons d-flex flex-wrap gap-3 mb-4">
-                        <a href="https://www.facebook.com/vigazafarm" class="social-circle" title="Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/vigazafarm/" class="social-circle" title="Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@vigazafarm" class="social-circle" title="YouTube">
-                            <i class="bi bi-youtube"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@vigazafarm" class="social-circle" title="TikTok">
-                            <i class="bi bi-tiktok"></i>
-                        </a>
-                    </div>
-
-                    <h6 class="fw-semibold text-uppercase text-success mb-3">
-                        Newsletter
-                    </h6>
-                    <form class="newsletter-form">
-                        <div class="input-group mb-2">
-                            <input type="email" class="form-control bg-black border-success text-white"
-                                placeholder="Email Anda" />
-                            <button class="btn btn-success" type="submit">
-                                <i class="bi bi-send-fill"></i>
-                            </button>
-                        </div>
-                        <p class="small text-white-50">
-                            Dapatkan update terbaru dari kami.
-                        </p>
-                    </form>
-                </div>
-            </div>
-
-            <hr class="divider border-success opacity-75 my-4" />
-
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start small text-white-50">
-                    &copy; 2025 <strong class="text-success">Vigaza Farm</strong>. All
-                    rights reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end small text-white-50">
-                    Designed with <i class="bi bi-heart-fill text-danger"></i> in Sleman
-                </div>
-            </div>
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer class="footer text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Brand & Deskripsi -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="footer-brand">
+            <img src="../asset/img/icon.png" alt="Vigaza Logo" class="img-fluid mb-3" style="max-height: 60px" />
+            <h4 class="fw-bold text-success">Vigaza Farm</h4>
+            <p class="small text-white-50 mt-3 pe-3">
+              Penyedia produk puyuh berkualitas: telur segar, daging, dan
+              layanan edukatif. Komitmen kami adalah mutu dan pelayanan
+              terbaik.
+            </p>
+          </div>
         </div>
-    </footer>
 
-    <!-- ============ JAVASCRIPT SECTION ============ -->
-    <!-- jQuery & Bootstrap Bundle -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Navigasi -->
+        <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <h6 class="fw-semibold text-uppercase text-success mb-3">
+            Navigasi
+          </h6>
+          <ul class="list-unstyled small footer-links">
+            <li class="mb-2">
+              <a href="index.html" class="text-white-50 text-decoration-none hover-success">Beranda</a>
+            </li>
+            <li class="mb-2">
+              <a href="aboutus.html" class="text-white-50 text-decoration-none hover-success">Tentang
+                Kami</a>
+            </li>
+            <li class="mb-2">
+              <a href="ourwork.html" class="text-white-50 text-decoration-none hover-success">Galeri</a>
+            </li>
+            <li class="mb-2">
+              <a href="contact.html" class="text-white-50 text-decoration-none hover-success">Kontak</a>
+            </li>
+            <li class="mb-2">
+              <a href="blog.html" class="text-white-50 text-decoration-none hover-success">Blog</a>
+            </li>
+          </ul>
+        </div>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Kontak -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <h6 class="fw-semibold text-uppercase text-success mb-3">Kontak</h6>
+          <ul class="list-unstyled small text-white-50 footer-contact">
+            <li class="mb-3 d-flex">
+              <i class="bi bi-geo-alt-fill text-success me-2 mt-1"></i>
+              <span>Jl. Gading Raya, Palgading, Sinduharjo, Sleman 55581</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="bi bi-envelope-fill text-success me-2 mt-1"></i>
+              <a href="mailto:vigazafarm@gmail.com"
+                class="text-white-50 text-decoration-none hover-success">vigazafarm@gmail.com</a>
+            </li>
+            <li class="d-flex">
+              <i class="bi bi-whatsapp text-success me-2 mt-1"></i>
+              <a href="https://wa.me/6281234567890" class="text-white-50 text-decoration-none hover-success">+62
+                812-3456-7890</a>
+            </li>
+          </ul>
+        </div>
 
-    <script src="../asset/js/main.js"></script>
+        <!-- Sosial Media & Newsletter -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <h6 class="fw-semibold text-uppercase text-success mb-3">
+            Ikuti Kami
+          </h6>
+          <div class="social-icons d-flex flex-wrap gap-3 mb-4">
+            <a href="https://www.facebook.com/vigazafarm" class="social-circle" title="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/vigazafarm/" class="social-circle" title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@vigazafarm" class="social-circle" title="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@vigazafarm" class="social-circle" title="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
+          </div>
 
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800, // Global animation duration
-            easing: "ease-in-out", // Animation easing
-            once: true, // Whether animation should happen only once
-            mirror: false, // Whether elements should animate out while scrolling past them
-        });
-    </script>
+          <h6 class="fw-semibold text-uppercase text-success mb-3">
+            Newsletter
+          </h6>
+          <form class="newsletter-form">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control bg-black border-success text-white" placeholder="Email Anda" />
+              <button class="btn btn-success" type="submit">
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </div>
+            <p class="small text-white-50">
+              Dapatkan update terbaru dari kami.
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <hr class="divider border-success opacity-75 my-4" />
+
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start small text-white-50">
+          &copy; 2025 <strong class="text-success">Vigaza Farm</strong>. All
+          rights reserved.
+        </div>
+        <div class="col-md-6 text-center text-md-end small text-white-50">
+          Designed with <i class="bi bi-heart-fill text-danger"></i> in Sleman
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ JAVASCRIPT SECTION ============ -->
+  <!-- jQuery & Bootstrap Bundle -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="../asset/js/main.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800, // Global animation duration
+      easing: "ease-in-out", // Animation easing
+      once: true, // Whether animation should happen only once
+      mirror: false, // Whether elements should animate out while scrolling past them
+    });
+  </script>
 </body>
 
 </html>
