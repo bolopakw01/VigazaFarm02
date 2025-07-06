@@ -333,10 +333,10 @@ body {
   transform: scale(1.06);
 }
 
-/* Dropdown menu */
+/*============== DROPDWON MENU ===================*/
 .dropdown-menu {
   padding: 0.5rem 0;
-  background: transparent !important;
+  background: rgba(0, 0, 0, 0.347) !important;
   box-shadow: none;
   border: none;
 }
@@ -353,10 +353,18 @@ body {
   margin-right: 0.75rem;
   width: 20px;
   text-align: center;
+  transition: color 0.2s;
 }
 
-.dropdown-item:hover i {
-  color: var(--primary-color);
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(25, 135, 84, 0.08);
+  color: var(--primary-dark);
+}
+
+.dropdown-item:hover i,
+.dropdown-item:focus i {
+  color: var(--primary-dark);
 }
 
 /* Untuk mobile menu */
@@ -1010,6 +1018,20 @@ body {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 20%);
 }
 
+/* Remove underline from email and WhatsApp links */
+.contact-info a[href^="mailto:"],
+.contact-info a[href^="https://wa.me"],
+.contact-info a[href^="tel:"] {
+  text-decoration: none !important;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+/* Email & WhatsApp text green on hover, slightly larger */
+.contact-info a[href^="mailto"]:hover,
+.contact-info a[href^="https://wa.me"]:hover {
+  color: var(--primary-dark) !important;
+}
+
 /* ==================== FOOTER ==================== */
 .footer {
   background: linear-gradient(135deg, #000000, #013a13);
@@ -1029,26 +1051,40 @@ body {
 .footer-links li a:hover,
 .footer-contact a:hover,
 .hover-success:hover {
-  color: var(--primary-color) !important;
+  color: #fff !important;
   padding-left: 6px;
 }
 
 .social-icons .social-circle {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  background: #198754;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition: all var(--transition-base);
+  text-decoration: none !important;
+}
+
+.social-circle > i,
+.social-circle > svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1;
 }
 
 .social-circle:hover {
+  background: #fff !important;
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  text-decoration: none !important;
 }
 
 .social-circle:hover .bi-facebook {

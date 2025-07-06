@@ -324,5 +324,3 @@ window.addEventListener("load", function () {
     document.body.classList.add("loaded");
 });
 
-// ==================== MARQUEE ANIMATION ====================
-// Pause marquee on hover is handled via inline event handlers in HTML
